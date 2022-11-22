@@ -31,3 +31,39 @@
 4. Audit designated software work products to verify compliance with those defined as part of the software process
 5. Ensure that deviations in software work and work products are documented and handled according to a documented procedure.
 6. Records any noncompliance and reports to senior management
+
+# 2. Reverse Engineering
+
+- Software Reverse Engineering is a process of recovering the design, requirement specifications and functions of a product from an analysis of its code.
+- The purpose of reverse engineering is to facilitate the maintenance work by improving the understandability of a system and to produce the necessary documents for a legacy system. 
+
+#### Reverse Engineering Goals: 
+
+- Cope with Complexity.
+- Recover lost information.
+- Detect side effects.
+- Synthesise higher abstraction.
+- Facilitate Reuse.
+
+#### Steps of Software Reverse Engineering: 
+
+- Collection Information: 
+- Examining the information: 
+- Extracting the structure: 
+- Recording the functionality: 
+- Recording data flow: 
+- Recording control flow: 
+- Review extracted design: 
+- Generate documentation: 
+ 
+#### Reverse Engineering Tools:
+
+- CIAO and CIA: 
+- Rigi
+- Bunch
+- GEN++
+- PBS
+
+
+
+
