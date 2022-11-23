@@ -151,7 +151,21 @@
   - For example, changing function-oriented programs into object-oriented programs and re-structure data as required
 - Apply Forward engineering concepts in order to get re-engineered software
 
+# 6. Explain Formal Technical Review.
 
+- A formal technical review (FTR) is a software quality control activity performed by software engineers (and others).
+
+#### The objectives of an FTR are:
+1. To uncover errors in function, logic, or implementation; for any representation of the software
+2. To verify that the software under review meets its requirements
+3. To ensure that the software has been represented according to predefined standards
+4. To achieve software that is developed in a uniform manner
+5. To make projects more manageable
+
+- During the FTR,
+  - a reviewer (the recorder) actively records all issues that have been raised
+- These are summarized at the end of the review meeting, and a reviewed issues list is produced
+- In addition, a formal technical review summary report is completed
 
 
 
