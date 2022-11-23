@@ -110,7 +110,32 @@
 8. Version Control
 9. Collaboration
 
+# 4. Write short note on Version Control. 
 
+- Version control systems are a category of software tools that helps in recording changes made to files by keeping a track of modifications done in the code. 
+
+- **Example** : Git, Helix core, Microsoft TFS,
+
+
+#### Types of Version Control Systems: 
+
+1. Local Version Control Systems
+2. Centralized Version Control Systems
+3. Distributed Version Control Systems
+
+#### Purpose of Version Control: 
+
+- Multiple people can work simultaneously on a single project.
+- It integrates the work that is done simultaneously by different members of the team
+- Version control provides access to the historical versions of a project.
+- It can be easily known when, why, and by whom any part of a file was edited.
+
+#### Benefits of the version control system:
+
+- Enhances the project development speed by providing efficient collaboration.
+- Reduce possibilities of errors through traceability to every small change.
+- Informs us about Who, What, When, Why changes have been made.
+- Helps in recovery in case of any disaster or contingent situation,
 
 
 
