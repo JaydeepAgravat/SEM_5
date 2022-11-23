@@ -135,7 +135,23 @@
 - Enhances the project development speed by providing efficient collaboration.
 - Reduce possibilities of errors through traceability to every small change.
 - Informs us about Who, What, When, Why changes have been made.
-- Helps in recovery in case of any disaster or contingent situation,
+- Helps in recovery in case of any disaster or contingent situation.
+
+# 5. Re-engineering.
+
+- When we need to update the software to keep it to the current market, without impacting its functionality, it is called software re-engineering.
+- It is a process where the design of software is changed and programs are re-written
+- Legacy software cannot keep tuning with the latest technology available in the market
+  - For example, initially UNIX was developed in assembly language. When language C came into existence, UNIX was re-engineered in C, because working in assembly language was difficult.
+- Other than this, sometimes programmers notice that few parts of software need more maintenance than others and they also need re-engineering.
+- Decide what to re-engineer.
+  - Is it whole software or a part of it?
+- Perform Reverse Engineering, in order to obtain specifications of existing software
+- Restructure Program if required
+  - For example, changing function-oriented programs into object-oriented programs and re-structure data as required
+- Apply Forward engineering concepts in order to get re-engineered software
+
+
 
 
 
