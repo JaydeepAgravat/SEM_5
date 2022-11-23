@@ -64,6 +64,59 @@
 - GEN++
 - PBS
 
+# 3. What is DevOps? How it works? What are the DevOps principles & best practices?
+
+#### DevOps
+
+- DevOps is a software development methodology that improves the collaboration between developers and operations teams using various automation tools.
+- These automation tools are implemented using various stages which are a part of the DevOps Lifecycle.
+- DevOps bridges the gap between the operation team & development team, which generally used to work in isolation with another.
+- The main aim of DevOps is to provide continuous & high-quality delivery of the software by making shortening SDLC
+
+#### How DevOps Works?
+
+- The DevOps Lifecycle divides the SDLC lifecycle into the following stages:
+1. Continuous Development:
+2. Continuous Integration:
+3. Continuous Deployment:
+4. Continuous Testing:
+5. Continuous Monitoring:
+6. Continuos operations
+7. Continuos Feedback
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20220103162635/11.PNG">
+
+#### Devops Practices
+
+1. Process automation
+2. Continuous Integration (CI)
+3. Continuous Delivery (CD)
+4. Continuous Deployment
+5. Infrastructure as code
+6. Microservices
+7. Configuration management and many more.
+
+#### Devops Principles
+
+- DevOps principles guide how to organize a DevOps environment.
+
+1. Incremental Releases
+2. Automation
+3. DevOps Pipeline
+4. Continuous Integration
+5. Continuous Delivery
+6. Continuous Monitoring
+7. Feedback Sharing
+8. Version Control
+9. Collaboration
+
+
+
+
+
+
+
+
 
 
 
