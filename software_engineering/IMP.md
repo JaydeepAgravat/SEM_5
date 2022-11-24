@@ -208,7 +208,17 @@ said to be functionally independent of other modules.
 | Highly cohesive gives the best software.                | Whereas loosely coupling gives the best software.        |
 | In cohesion, the module focuses on a single thing.      | In coupling, modules are connected to the other modules. |
 
+# 8. State the difference between procedural Design and Object Oriented Design.
 
+|                                                      Procedural Oriented Design                                                     |                                                                             Object Oriented Design                                                                             |
+|:-----------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| The basic abstractions, which are given to the user, are real world functions.                                                      | The basic abstractions are not the real world functions but are the data abstraction where the real world entities are represented.                                            |
+| Functions are grouped together by which a higher level function is Page on obtained.an eg of this technique isSA/SD.                | Functions are grouped together on the basis of the data they operate since the classes are associated with their methods.                                                      |
+| In this appproach the state information is often represented in a centralized shared memory.                                        | In this approach the state information is not represented in a centralized memory but is implemented or distributed among the objects of the system.                           |
+| we decompose in function/procedure level                                                                                            | we decompose in class level                                                                                                                                                    |
+| Top down Approach                                                                                                                   | Bottom up approach                                                                                                                                                             |
+| It views system as Black Box that performs high level function and later decompose it detailed function so to be mapped to modules. | Object-oriented design is the discipline of defining the objects and their interactions to solve a problem that was identified and documented during object-oriented analysis. |
+| Begins by considering the use case diagrams and Scenarios.                                                                          | Begins by identifying objects and classes                                                                                                                                      |
 
 
 
