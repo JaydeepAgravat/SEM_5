@@ -167,8 +167,46 @@
 - These are summarized at the end of the review meeting, and a reviewed issues list is produced
 - In addition, a formal technical review summary report is completed
 
+# 7. Cohesion & Coupling
 
+- A good software design implies clean decomposition of the problem into
+modules, and the neat arrangement of these modules in a hierarchy.
 
+- The primary characteristics of neat module decomposition are
+high cohesion and low coupling.
+
+#### Cohesion
+
+- Cohesion is a measure of the degree to which the elements of the module are functionally related.
+- A good software will have high Cohesion. 
+- Cohesion is an indication of the relative functional
+strength of a module.
+- A cohesive module performs a single task, requiring
+little interaction with other components.
+- A module having high cohesion and low coupling is
+said to be functionally independent of other modules.
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/cohesion.png">
+
+#### Coupling
+
+-  Coupling is the measure of the degree of interdependence between the modules.
+- A good software will have low coupling. 
+- If two modules interchange large amounts of data, then they are highly interdependent.
+- The degree of coupling between two modules depends on their interface complexity.
+- The interface complexity is basically determined by the number of types of parameters that are interchanged while invoking the functions of the module.
+- A module having high cohesion and low coupling is said to be functionally independent of other modules.
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/coupling.png">
+
+| Cohesion                                                | Coupling                                                 |
+|---------------------------------------------------------|----------------------------------------------------------|
+| Cohesion is the concept of intra-module.                | Coupling is the concept of inter-module.                 |
+| Cohesion represents the relationship within a module.   | Coupling represents the relationships between modules.   |
+| Increasing cohesion is good for software.               | Increasing coupling is avoided for software.             |
+| Cohesion represents the functional strength of modules. | Coupling represents the independence among modules.      |
+| Highly cohesive gives the best software.                | Whereas loosely coupling gives the best software.        |
+| In cohesion, the module focuses on a single thing.      | In coupling, modules are connected to the other modules. |
 
 
 
