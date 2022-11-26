@@ -30,3 +30,15 @@
 5. Access Control
   - When multiple devices share the same communication channel there is a high probability of collision, so it’s the responsibility of DLL to check which device has control over the channel and CSMA/CD and CSMA/CA can be used to avoid collisions and loss of frames in the channel. 
 6. Reliable delivery
+
+# Error Detection Techniques
+
+1. Parity Check
+2. Checksum
+3. Cyclic redundancy check
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/detect12.jpg">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/detect13.jpg">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/detect15.jpg">
+
+
