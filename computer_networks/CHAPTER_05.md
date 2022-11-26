@@ -41,4 +41,35 @@
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/detect13.jpg">
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/detect15.jpg">
 
+# Ethernet
+
+- Ethernet is one of the most widely used LAN technologies. 
+- The reason behind its wide usability is Ethernet is easy to understand, implement, maintain, and allows low-cost network implementation.
+- Ethernet offers flexibility in terms of topologies that are allowed.
+- Ethernet generally uses Bus Topology.
+- Ethernet operates in two layers of the OSI model, Physical Layer, and Data Link Layer. 
+- For Ethernet, the protocol data unit is Frame since we mainly deal with DLL.
+- In order to handle collision, the Access control mechanism used in Ethernet is CSMA/CD. 
+
+#### Types of Ethernet Networks
+
+1. Switch Ethernet
+2. Fast Ethernet
+3. Gigabit Ethernet
+
+#### Advantages of Ethernet
+
+1. Speed
+2. Effectiveness
+3. Good data transfer quality
+4. Security
+5. Fairly low cost
+6. Reliability
+
+#### Disadvantages of Ethernet
+
+1. Connections
+2. Mobility
+3. Expandability
+
 
