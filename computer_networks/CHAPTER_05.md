@@ -72,4 +72,10 @@
 2. Mobility
 3. Expandability
 
+# Bit stuffing & Byte stuffing
 
+<a href="https://www.geeksforgeeks.org/difference-between-byte-stuffing-and-bit-stuffing/">X</a>
+
+# Address Resolution Protocol
+
+<a href="https://www.geeksforgeeks.org/how-address-resolution-protocol-arp-works/">X</a>
