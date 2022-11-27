@@ -220,6 +220,43 @@ said to be functionally independent of other modules.
 | It views system as Black Box that performs high level function and later decompose it detailed function so to be mapped to modules. | Object-oriented design is the discipline of defining the objects and their interactions to solve a problem that was identified and documented during object-oriented analysis. |
 | Begins by considering the use case diagrams and Scenarios.                                                                          | Begins by identifying objects and classes                                                                                                                                      |
 
+# 9. What is Software Testing? What is the role of a Software Tester? Compare Black Box and White Box Testing.
 
+#### Software Testing
 
+- Software testing is a process of identifying the correctness of software by considering its all attributes (Reliability, Scalability, Portability, Re-usability, Usability) and evaluating the execution of software components to find the software bugs or errors or defects.
+- Testing is mandatory because it will be a dangerous situation if the software fails any of time due to lack of testing.
+- So, without testing software cannot be deployed to the end user.
 
+#### Role of a Software Tester
+
+- Software Testers are responsible for the quality of software development and deployment
+- They are involved in performing automated and manual tests to ensure the software created by developers is fit for purpose. 
+- Some of the duties include analysis of software, and systems, mitigate risk and prevent software issues.
+- Provide timely solutions
+- Provide support and documentation
+- collaborate closely with other team members and departments
+- execute all levels of testing (System, Integration, and Regression)
+
+#### Black Box and White Box Testing
+
+| S. No. | Black Box Testing                                                                                                                   | White Box Testing                                                                                                                              |
+|--------|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.     | It is a way of software testing in which the internal structure or the program or the code is hidden and nothing is known about it. | It is a way of testing the software in which the tester has knowledge about the internal structure or the code or the program of the software. |
+| 2.     | Implementation of code is not needed for black box testing.                                                                         | Code implementation is necessary for white box testing.                                                                                        |
+| 3.     | It is mostly done by software testers.                                                                                              | It is mostly done by software developers.                                                                                                      |
+| 4.     | No knowledge of implementation is needed.                                                                                           | Knowledge of implementation is required.                                                                                                       |
+| 5.     | It can be referred to as outer or external software testing.                                                                        | It is the inner or the internal software testing.                                                                                              |
+| 6.     | It is a functional test of the software.                                                                                            | It is a structural test of the software.                                                                                                       |
+| 7.     | This testing can be initiated based on the requirement specifications document.                                                     | This type of testing of software is started after a detail design document.                                                                    |
+| 8.     | No knowledge of programming is required.                                                                                            | It is mandatory to have knowledge of programming.                                                                                              |
+| 9.     | It is the behavior testing of the software.                                                                                         | It is the logic testing of the software.                                                                                                       |
+| 10.    | It is applicable to the higher levels of testing of software.                                                                       | It is generally applicable to the lower levels of software testing.                                                                            |
+| 11.    | It is also called closed testing.                                                                                                   | It is also called as clear box testing.                                                                                                        |
+| 12.    | It is least time consuming.                                                                                                         | It is most time consuming.                                                                                                                     |
+| 13.    | It is not suitable or preferred for algorithm testing.                                                                              | It is suitable for algorithm testing.                                                                                                          |
+| 14.    | Can be done by trial and error ways and methods.                                                                                    | Data domains along with inner or internal boundaries can be better tested.                                                                     |
+| 15.    | Example: Search something on google by using keywords                                                                               | Example: By input to check and verify loops                                                                                                    |
+| 16.    | Black-box test design techniques- Decision table testing All-pairs testing Equivalence partitioning Error guessing                  | White-box test design techniques- Control flow testing Data flow testing Branch testing                                                        |
+| 17.    | Types of Black Box Testing:  Functional Testing  Non-functional testing  Regression Testing                                         | Types of White Box Testing:  Path Testing  Loop Testing  Condition testing                                                                     |
+| 18.    | It is less exhaustive as compared to white box testing.                                                                             | It is comparatively more exhaustive than black box testing.                                                                                    |
