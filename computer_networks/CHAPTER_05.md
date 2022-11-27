@@ -251,4 +251,21 @@ In Token ring, token is passed from one station to another adjacent station in t
 - After sending a frame, each station must wait for all N stations (including itself) to send the token to their neighbours and the other N – 1 stations to send a frame, if they have one.
 - There exists problems like duplication of token or token is lost or insertion of new station, removal of a station, which need be tackled for correct and reliable operation of this scheme.
 
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/token.png">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/token.png" width=50%>
+
+# FDMA VS TDMA VS CDMA
+
+| FDMA                                                                                    | TDMA                                                                    | CDMA                                                                                            |
+|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| FDMA stands for Frequency Division Multiple Access.                                     | TDMA stands for Time Division Multiple Access.                          | CDMA stands for Code Division Multiple Access.                                                  |
+| In this, sharing of bandwidth among different stations takes place.                     | In this, only the sharing of time of satellite transponder takes place. | In this, there is sharing of both i.e. bandwidth and time among different stations takes place. |
+| There is no need of any codeword.                                                       | There is no need of any codeword.                                       | Codeword is necessary.                                                                          |
+| In this, there is only need of guard bands between the adjacent channels are necessary. | In this, guard time of the adjacent slots are necessary.                | In this, both guard bands and guard time are necessary.                                         |
+| Synchronization is not required.                                                        | Synchronization is required.                                            | Synchronization is not required.                                                                |
+| The rate of data is low.                                                                | The rate of data is medium.                                             | The rate of data is high.                                                                       |
+| Mode of data transfer is continuous signal.                                             | Mode of data transfer is signal in bursts.                              | Mode of data transfer is digital signal.                                                        |
+| It is little flexible.                                                                  | It is moderate flexible.                                                | It is highly flexible.                                                                          |
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200713171311/FDMA1.png" width=50%>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200713172234/TDMA.png" width=50%>
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200714093650/CDMA.png" width=50%>
