@@ -55,3 +55,24 @@ information such as text, graphics, voice, video, and computer programs.
 proceed.
 - Important elements of protocols are
 - 1. Syntax 2. Semantics 3. Timing
+
+# The Network Edge
+- It defines those computers of the network used at the edge (end) of the network. These computers are known as hosts or end system.
+- A host can be classified into the following two types:
+1. Clients: 
+- Refer to the computer systems that request servers for the completion of a task.
+- The clients are generally called desktop PCs or workstations.
+2. Servers:
+- Refer to the computer systems that receive requests from the clients and process them. After the processing is complete, the servers send a reply to the clients who sent the request.
+
+# Peer-to-Peer Network vs Client-Server Network     
+
+| S.NO | Client-Server Network                                                                                     | Peer-to-Peer Network                                                                                 |
+|------|-----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| 1.   | In Client-Server Network, Clients and server are differentiated, Specific server and clients are present. | In Peer-to-Peer Network, Clients and server are not differentiated.                                  |
+| 2.   | Client-Server Network focuses on information sharing.                                                     | While Peer-to-Peer Network focuses on connectivity.                                                  |
+| 3.   | In Client-Server Network, Centralized server is used to store the data.                                   | While in Peer-to-Peer Network, Each peer has its own data.                                           |
+| 4.   | In Client-Server Network, Server respond the services which is request by Client.                         | While in Peer-to-Peer Network, Each and every node can do both request and respond for the services. |
+| 5.   | Client-Server Network are costlier than Peer-to-Peer Network.                                             | While Peer-to-Peer Network are less costlier than Client-Server Network.                             |
+| 6.   | Client-Server Network are more stable than Peer-to-Peer Network.                                          | While Peer-to-Peer Network are less stable if number of peer is increase.                            |
+| 7.   | Client-Server Network is used for both small and large networks.                                          | While Peer-to-Peer Network is generally suited for small networks with fewer than 10 computers.      |
