@@ -76,3 +76,38 @@ proceed.
 | 5.   | Client-Server Network are costlier than Peer-to-Peer Network.                                             | While Peer-to-Peer Network are less costlier than Client-Server Network.                             |
 | 6.   | Client-Server Network are more stable than Peer-to-Peer Network.                                          | While Peer-to-Peer Network are less stable if number of peer is increase.                            |
 | 7.   | Client-Server Network is used for both small and large networks.                                          | While Peer-to-Peer Network is generally suited for small networks with fewer than 10 computers.      |
+
+# Techniques used in data communications to transfer data
+
+
+| Circuit Switching                                                                                                                                                             | Packet Switching                                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| In-circuit switching has there are 3 phases:  i) Connection Establishment.  ii) Data Transfer.  iii) Connection Released.                                                     | In Packet switching directly data transfer takes place.                                                                   |
+| In-circuit switching, each data unit knows the entire path address which is provided by the source.                                                                           | In Packet switching, each data unit just knows the final destination address intermediate path is decided by the routers. |
+| In-Circuit switching, data is processed at the source system only                                                                                                             | In Packet switching, data is processed at all intermediate nodes including the source system.                             |
+| The delay between data units in circuit switching is uniform.                                                                                                                 | The delay between data units in packet switching is not uniform.                                                          |
+| Resource reservation is the feature of circuit switching because the path is fixed for data transmission.                                                                     | There is no resource reservation because bandwidth is shared among users.                                                 |
+| Circuit switching is more reliable.                                                                                                                                           | Packet switching is less reliable.                                                                                        |
+| Wastage of resources is more in Circuit Switching                                                                                                                             | Less wastage of resources as compared to Circuit Switching                                                                |
+| It is not a store and forward technique.                                                                                                                                      | It is a store and forward technique.                                                                                      |
+| Transmission of the data is done by the source.                                                                                                                               | Transmission of the data is done not only by the source but also by the intermediate routers.                             |
+| Congestion can occur during the connection establishment phase because there might be a case where a request is being made for a channel but the channel is already occupied. | Congestion can occur during the data transfer phase, a large number of packets comes in no time.                          |
+| Circuit switching is not convenient for handling bilateral traffic.                                                                                                           | Packet switching is suitable for handling bilateral traffic.                                                              |
+| In-Circuit switching, the charge depends on time and distance, not on traffic in the network.                                                                                 | In Packet switching, the charge is based on the number of bytes and connection time.                                      |
+| Recording of packets is never possible in circuit switching.                                                                                                                  | Recording of packets is possible in packet switching.                                                                     |
+| In-Circuit Switching there is a physical path between the source and the destination                                                                                          | In Packet Switching there is no physical path between the source and the destination                                      |
+| Circuit Switching does not support store and forward transmission                                                                                                             | Packet Switching supports store and forward transmission                                                                  |
+| Call setup is required in circuit switching.                                                                                                                                  | No call setup is required in packet switching.                                                                            |
+| In-circuit switching each packet follows the same route.                                                                                                                      | In packet switching packets can follow any route.                                                                         |
+| The circuit switching network is implemented at the physical layer.                                                                                                           | Packet switching is implemented at the datalink layer and network layer                                                   |
+| Circuit switching requires simple protocols for delivery.                                                                                                                     | Packet switching requires complex protocols for delivery.                                                                 |
+# Transmission Media
+<img src="https://www.kencorner.com/wp-content/uploads/2018/03/TransmissionMedium.png" >
+
+# Network Topologies
+
+- A Network Topology is the arrangement of the various components of a computer network.
+
+<img src="https://cdn.educba.com/academy/wp-content/uploads/2019/06/Types-of-network-topology-2.png">
+
+
