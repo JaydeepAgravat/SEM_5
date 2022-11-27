@@ -79,3 +79,23 @@
 # Address Resolution Protocol
 
 <a href="https://www.geeksforgeeks.org/how-address-resolution-protocol-arp-works/">X</a>
+
+# Types of Communication Links
+
+- Communication links enable the stations to communicate with each other.
+
+1. Point to Point Link
+- Point to Point link is a dedicated link that exists between the two stations.
+- The entire capacity of the link is used for transmission between the two connected stations only.
+2. Broadcast Link
+- Broadcast link is a common link to which multiple stations are connected.
+- The capacity of the link is shared among the connected stations for transmission.
+- Bus Topology
+
+#### Access Control
+- Access Control is a mechanism that controls the access of stations to the transmission link.
+- Broadcast links require the access control.
+- This is because the link is shared among several stations.
+#### Need of Access Control-
+- To prevent the occurrence of collision or if the collision occurs, to deal with it.
+
