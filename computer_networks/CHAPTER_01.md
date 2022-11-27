@@ -22,6 +22,15 @@ media or wireless media.
 - Virus and Malware 
 - Cost of the network 
 
+# Application of computer network
+
+- online bill payment
+- watching movies or shows at home
+- home tutoring
+- social media access
+- playing games
+- internet access, etc.
+
 # Type of Computer Network
 
 | Basis                | LAN                                                           | MAN                                                        | WAN                                                                           |
