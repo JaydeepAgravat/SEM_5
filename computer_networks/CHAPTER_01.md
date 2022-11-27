@@ -102,12 +102,12 @@ proceed.
 | The circuit switching network is implemented at the physical layer.                                                                                                           | Packet switching is implemented at the datalink layer and network layer                                                   |
 | Circuit switching requires simple protocols for delivery.                                                                                                                     | Packet switching requires complex protocols for delivery.                                                                 |
 # Transmission Media
-<img src="https://www.kencorner.com/wp-content/uploads/2018/03/TransmissionMedium.png" >
+<img src="https://www.tutorialandexample.com/wp-content/uploads/2020/10/image-210.png" width=50%>
 
 # Network Topologies
 
 - A Network Topology is the arrangement of the various components of a computer network.
 
-<img src="https://cdn.educba.com/academy/wp-content/uploads/2019/06/Types-of-network-topology-2.png">
+<img src="https://cdn.educba.com/academy/wp-content/uploads/2019/06/Types-of-network-topology-2.png" width=50%>
 
 
