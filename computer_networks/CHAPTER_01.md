@@ -118,6 +118,7 @@ proceed.
 - A Network Topology is the arrangement of the various components of a computer network.
 
 <img src="https://cdn.educba.com/academy/wp-content/uploads/2019/06/Types-of-network-topology-2.png" width=50%>
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/1.01.png" width=70%>
 
 # OSI vs TCP/IP
 
