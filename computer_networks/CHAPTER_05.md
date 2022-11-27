@@ -156,3 +156,56 @@
 <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/5.01.png">
 <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/5.02.png">
 <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/5.03.png">
+
+# CSMA / CD
+
+- CSMA / CD stands for Carrier Sense Multiple Access / Collision Detection.
+- CSMA / CD is used in wired LANs.
+- CSMA / CD only minimizes the recovery time.
+- It does not take any steps to prevent the collision until it has taken place.
+- This access control method works as follows:
+
+#### Step-01: Sensing the Carrier
+- Any station willing to transmit the data through senses the carrier.
+- If it finds the carrier free, it starts transmitting its data packet otherwise not.
+- Each station can sense the carrier only at its point of contact with the carrier.
+- It is not possible for any station to sense the entire carrier.
+- there is a huge possibility that a station might sense the carrier free even when it is actually not.
+#### Step-02: Detecting the Collision
+- It is the responsibility of the transmitting station to detect the collision.
+- For detecting the collision, CSMA / CD implements the following condition.
+- This condition is followed by each station-
+- `Transmission delay >= 2 x Propagation delay`
+- Each station must transmit the data packet of size whose transmission delay is at least twice its propagation delay.
+- If the size of data packet is smaller, then collision detection would not be possible.
+```
+Transmission delay = Length of data packet (L) / Bandwidth (B)
+Propagation delay = Distance between the two stations (D) / Propagation speed (V)
+Length Of Data Packet : L >= 2 x B x D / V
+```
+```
+Case-01:
+
+If no collided signal comes back during the transmission,
+It indicates that no collision has occurred.
+The data packet is transmitted successfully.
+
+Case-02:
+
+If the collided signal comes back during the transmission,
+It indicates that the collision has occurred.
+The data packet is not transmitted successfully.
+Step-03 is followed.
+```
+
+#### Step-03: Releasing Jam Signal
+- It alerts the other stations not to transmit their data immediately after the collision.
+
+#### Step-04: Waiting For Back Off Time
+
+- After the collision, the transmitting station waits for some random amount of time called as back off time.
+- After back off time, it tries transmitting the data packet again.
+- If again the collision occurs, then station again waits for some random back off time and then tries again.
+- The station keeps trying until the back off time reaches its limit.
+- After the limit is reached, station aborts the transmission.
+- Back off time is calculated using Back Off Algorithm.
