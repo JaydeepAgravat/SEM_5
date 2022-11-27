@@ -209,3 +209,36 @@ Step-03 is followed.
 - The station keeps trying until the back off time reaches its limit.
 - After the limit is reached, station aborts the transmission.
 - Back off time is calculated using Back Off Algorithm.
+
+# Taking-turns protocols / controlled access protocol
+
+## Polling
+
+A polling is conducted in which all the stations willing to send data participates.
+The polling algorithm chooses one of the stations to send the data.
+The chosen station sends the data to the destination.
+After the chosen station has sent the data, the cycle repeats.
+It requires one of the nodes to be designated as a master node.
+polling of the nodes in round-robin fashion.
+
+#### Efficiency
+
+```
+Tpoll = Time taken for polling
+Tsend = Time taken for sending the data = Transmission delay + Propagation delay = Tt + Tp
+
+Useful time = Transmission delay of data packet = Tt
+Useless time = Time wasted during polling + Propagation delay of data packet = Tpoll + Tp
+
+Efficiency (η) = Useful Time / Total Time
+Efficiency (η) = Tt / Tpoll + Tp + Tt
+```
+
+#### Advantages
+- Unlike in Time Division Multiplexing, no slot is ever wasted.
+It leads to maximum efficiency and bandwidth utilization.
+#### Disadvantages
+- Time is wasted during polling.
+- Link sharing is not fair since each station has the equal probability of winning in each round.
+- Few stations might starve for sending the data.
+
