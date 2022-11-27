@@ -153,5 +153,6 @@
 |            Maximum efficiency = 18.4%  (Occurs at G = 1/2)            |                                           Maximum efficiency = 36.8%  ( Occurs at G = 1)                                          |
 | The main advantage of pure aloha is its simplicity in implementation. | The main advantage of slotted aloha is that it reduces the number of collisions to half and doubles the efficiency of pure aloha. |
 
-<img src="">
-<img src="">
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/5.01.png">
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/5.02.png">
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/5.03.png">
