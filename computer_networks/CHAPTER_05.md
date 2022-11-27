@@ -99,3 +99,59 @@
 #### Need of Access Control-
 - To prevent the occurrence of collision or if the collision occurs, to deal with it.
 
+# Multiple Aceess Protocols / method:
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/2-44.jpg">
+
+# Aloha
+
+- There are two different versions of Aloha-
+1. Pure Aloha
+2. Slotted Aloha
+
+### 1. Pure Aloha
+- It allows the stations to transmit data at any time whenever they want.
+- After transmitting the data packet, station waits for some time.
+- Then, following 2 cases are possible :
+1. Case-01:
+- Transmitting station receives an acknowledgement from the receiving station.
+- In this case, transmitting station assumes that the transmission is successful.
+2. Case-02:
+- Transmitting station does not receive any acknowledgement within specified time from the receiving station.
+- In this case, transmitting station assumes that the transmission is unsuccessful.
+- Then, Transmitting station uses a Back Off Strategy and waits for some random amount of time.
+- After back off time, it transmits the data packet again.
+- It keeps trying until the back off limit is reached after which it aborts the transmission.
+#### Efficiency
+- Efficiency of Pure Aloha (η) = G x e-2G
+- where G = Number of stations willing to transmit data
+- Maximum Efficiency of Pure Aloha (η) = 18.4%
+- The maximum efficiency of Pure Aloha is very less due to large number of collisions.
+
+### 2. Slotted Aloha
+
+- Slotted Aloha divides the time of shared channel into discrete intervals called as time slots.
+- Any station can transmit its data in any time slot.
+- The only condition is that station must start its transmission from the beginning of the time slot.
+- If the beginning of the slot is missed, then station has to wait until the beginning of the next time slot.
+- A collision may occur if two or more stations try to transmit data at the beginning of the same time slot.
+
+#### Efficiency
+
+- Efficiency of Slotted Aloha (η) = G x e-G
+- where G = Number of stations willing to transmit data at the beginning of the same time slot
+- Maximum Efficiency of Slotted Aloha (η) = 36.8%
+- The maximum efficiency of Slotted Aloha is high due to less number of collisions.
+
+### Difference Between Pure Aloha And Slotted Aloha
+
+|                               Pure Aloha                              |                                                           Slotted Aloha                                                           |
+|:---------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|
+|             Any station can transmit the data at any time.            |                                Any station can transmit the data at the beginning of any time slot.                               |
+|         The time is continuous and not globally synchronized.         |                                          The time is discrete and globally synchronized.                                          |
+|         Vulnerable time in which collision may occur  = 2 x Tt        |                                         Vulnerable time in which collision may occur  = Tt                                        |
+|   Probability of successful transmission of data packet  = G x e-2G   |                                  Probability of successful transmission of data packet  = G x e-G                                 |
+|            Maximum efficiency = 18.4%  (Occurs at G = 1/2)            |                                           Maximum efficiency = 36.8%  ( Occurs at G = 1)                                          |
+| The main advantage of pure aloha is its simplicity in implementation. | The main advantage of slotted aloha is that it reduces the number of collisions to half and doubles the efficiency of pure aloha. |
+
+<img src="">
+<img src="">
