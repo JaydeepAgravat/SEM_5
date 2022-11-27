@@ -214,12 +214,12 @@ Step-03 is followed.
 
 ## Polling
 
-A polling is conducted in which all the stations willing to send data participates.
-The polling algorithm chooses one of the stations to send the data.
-The chosen station sends the data to the destination.
-After the chosen station has sent the data, the cycle repeats.
-It requires one of the nodes to be designated as a master node.
-polling of the nodes in round-robin fashion.
+- A polling is conducted in which all the stations willing to send data participates.
+- The polling algorithm chooses one of the stations to send the data.
+- The chosen station sends the data to the destination.
+- After the chosen station has sent the data, the cycle repeats.
+- It requires one of the nodes to be designated as a master node.
+- polling of the nodes in round-robin fashion.
 
 #### Efficiency
 
@@ -242,3 +242,13 @@ It leads to maximum efficiency and bandwidth utilization.
 - Link sharing is not fair since each station has the equal probability of winning in each round.
 - Few stations might starve for sending the data.
 
+## Token Passing
+
+- In token passing scheme, the stations are connected logically to each other in form of ring and access to stations is governed by tokens.
+- A token is a special bit pattern or a small message, which circulate from one station to the next in some predefined order.
+In Token ring, token is passed from one station to another adjacent station in the ring whereas incase of Token bus, each station uses the bus to send the token to the next station in some predefined order.
+- In both cases, token represents permission to send. If a station has a frame queued for transmission when it receives the token, it can send that frame before it passes the token to the next station. If it has no queued frame, it passes the token simply.
+- After sending a frame, each station must wait for all N stations (including itself) to send the token to their neighbours and the other N – 1 stations to send a frame, if they have one.
+- There exists problems like duplication of token or token is lost or insertion of new station, removal of a station, which need be tackled for correct and reliable operation of this scheme.
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/token.png">
