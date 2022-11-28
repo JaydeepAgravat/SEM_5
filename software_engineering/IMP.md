@@ -373,3 +373,22 @@ product to be built.
 - Design: Avoid root causes of defects and meet the customer requirements.
 - Verify: To verify the process, compare the process with the standard plan and find differences.
  
+# 14. What is FTR? Enlist FTR guidelines.
+
+#### FTR
+
+- Formal Technical Review (FTR) is a software quality control activity performed by software engineers. 
+- The purpose of FTR is to verify that the software meets specified requirements.
+- To ensure that software is represented according to predefined standards.
+
+#### FTR guidelines
+1. Review the product, not the manufacture (producer).
+2. Take written notes (record purpose)
+3. Limit the number of participants and insists upon advance preparation.
+4. Develop a checklist for each product that is likely to be reviewed.
+5. Allocate resources and time schedule for FTRs in order to maintain time schedule.
+6. Conduct meaningful training for all reviewers in order to make reviews effective.
+7. Reviews earlier reviews which serve as the base for the current review being conducted.
+8. Set an agenda and maintain it.
+9. Separate the problem areas, but do not attempt to solve every problem notes.
+10. Limit debate and rebuttal.
