@@ -306,33 +306,38 @@ conventional requirements elicitation techniques.
 
 #### Activities
 
-- Component qualification. System requirements and architecture define the components that will be required.
-Reusable components (whether COTS or in-house) are normally identified by the characteristics of their
+1. Component qualification.
+- System requirements and architecture define the components that will be required.
+- Reusable components (whether COTS or in-house) are normally identified by the characteristics of their
 interfaces.
-- Component adaptation. Software architecture represents design patterns that are composed of components
+2. Component adaptation.
+- Software architecture represents design patterns that are composed of components
 (units of functionality), connections, and coordination.
 - In essence the architecture defines the design rules for all components, identifying modes of connection and
 coordination.
-- Component composition. Architectural style again plays a key role in the way in which software components
-are integrated to form a working system.
-- Component update. When systems are implemented with COTS components, update is complicated by the
-imposition of a third party (i.e., the organization that developed the reusable component may be outside the
+3. Component composition.
+- Architectural style again plays a key role in the way in which software components are integrated to form a working system.
+4. Component update.
+- When systems are implemented with COTS components, update is complicated by the imposition of a third party (i.e., the organization that developed the reusable component may be outside the
 Immediate control of the software engineering organization).
 
 #### Various Components
 
-- Component—a nontrivial, nearly independent, and replaceable part of a system that fulfills a clear function in
+1. Component
+- a nontrivial, nearly independent, and replaceable part of a system that fulfills a clear function in
 the context of a well-defined architecture.
-- Run-time software component—a dynamic bindable package of one or more programs managed as a unit and
-accessed through documented interfaces that can be discovered in run time.
-- Software component—a unit of composition with contractually specified and explicit context dependencies
-only.
-- Business component—the software implementation of an “autonomous” business concept or business
-process.
-- Qualified components—assessed by software engineers to ensure that not only functionality, but
-performance, reliability, usability, and other quality factors follow to the requirements of the system or
+2. Run-time software component
+- a dynamic bindable package of one or more programs managed as a unit and accessed through documented interfaces that can be discovered in run time.
+3. Software component
+- a unit of composition with contractually specified and explicit context dependencies only.
+4. Business component
+- the software implementation of an “autonomous” business concept or business process.
+5. Qualified components
+- assessed by software engineers to ensure that not only functionality, but performance, reliability, usability, and other quality factors follow to the requirements of the system or
 product to be built.
-- Adapted components—adapted to modify (also called mask or wrap) unwanted or undesirable characteristics.
-- Assembled components—integrated into an architectural style and interconnected with an appropriate
-infrastructure that allows the components to be coordinated and managed effectively.
-- Updated components—replacing existing software as new versions of components become available.
+6. Adapted components
+- adapted to modify (also called mask or wrap) unwanted or undesirable characteristics.
+7. Assembled components
+- integrated into an architectural style and interconnected with an appropriate infrastructure that allows the components to be coordinated and managed effectively.
+8. Updated components
+- replacing existing software as new versions of components become available.
