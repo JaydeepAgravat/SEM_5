@@ -342,7 +342,7 @@ product to be built.
 8. Updated components
 - replacing existing software as new versions of components become available.
 
-# Write short note on Six Sigma standard. 
+# 13. Write short note on Six Sigma standard. 
 
 - Six Sigma is the process of producing high and improved quality output. 
 - This can be done in two phases – identification and elimination. - - The cause of defects is identified and appropriate elimination is done which reduces variation in whole processes.
