@@ -341,3 +341,35 @@ product to be built.
 - integrated into an architectural style and interconnected with an appropriate infrastructure that allows the components to be coordinated and managed effectively.
 8. Updated components
 - replacing existing software as new versions of components become available.
+
+# Write short note on Six Sigma standard. 
+
+- Six Sigma is the process of producing high and improved quality output. 
+- This can be done in two phases – identification and elimination. - - The cause of defects is identified and appropriate elimination is done which reduces variation in whole processes.
+- To achieve six sigma a process must not produce more than 3.4 defects per million opportunities.
+- 5 Sigma -> 230 defects per million
+- 4 Sigma -> 6210 defects per million
+
+#### Characteristics of Six Sigma
+1. Statistical Quality Control
+2. Methodical Approach
+3. Fact and Data-Based Approach
+4. Project and Objective-Based Focus
+5. Customer Focus
+6. Teamwork Approach to Quality Management
+
+#### Six Sigma Methodologies
+
+- Six sigma have two methodologies.
+1. DMAIC (Define, Measure, Analyze, Improve, Control)
+- Define: Define the problem or process to improve upon related to the customer and goals
+- Measure: How can you measure this process in a systematic way?
+- Analyze: Analyze the process or problem and identify the way in which it can be improved. What are the root causes of problems within the process? 
+- Improve: Once you know the causes of the problems, present solutions for them and implement them
+- Control: Utilize Statistical Process Control to continuously measure your results and ensure you are improving Several Software Packages available to assist in measuring yield, defects per million opportunities, etc.
+
+2. DMADV: (Define, Measure, Analyze, Design, Verify)
+- Define, Measure and analyze are similar to above method.
+- Design: Avoid root causes of defects and meet the customer requirements.
+- Verify: To verify the process, compare the process with the standard plan and find differences.
+ 
