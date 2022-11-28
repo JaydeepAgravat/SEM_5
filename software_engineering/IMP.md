@@ -392,3 +392,29 @@ product to be built.
 8. Set an agenda and maintain it.
 9. Separate the problem areas, but do not attempt to solve every problem notes.
 10. Limit debate and rebuttal.
+
+# 15. Write a short note on Software Configuration Management.
+
+- Software Configuration Management(SCM) is a process to systematically manage, organize, and control the changes in the documents, codes, and other entities during the Software Development Life Cycle.
+- The primary goal is to increase productivity with minimal mistakes.
+- The SCM process planning begins at the early phases of a project.
+- The main reason behind configuration management process is that there are multiple people working on software which is continually updating. 
+- SCM helps establish concurrency, synchronization, and version control.
+
+#### Processes involved in SCM 
+
+1. Identification and Establishment
+2. Version control 
+3. Change control 
+4. Configuration auditing
+5. Reporting
+
+#### SCM Tools 
+
+- CLEAR CASETOOL (CC),
+- SaltStack
+- Puppet
+- IBM Configuration management version management
+- Razor
+
+
