@@ -107,7 +107,7 @@ Switching via interconnection network: This is a more sophisticated network, her
 - It allows reuse of addresses (only hold address while connected “on”). 
 - It also support mobile users who want to join network.
 
-<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.01.png" >
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.01.png" width=60%>
 
 ##### Advantages 
 
@@ -152,4 +152,23 @@ Switching via interconnection network: This is a more sophisticated network, her
 - e.g. the requested service is not available or that a host or router could not be reached. 
  <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.03.png" width=70%>
  
- 
+# Hierarchical Routing Protocol
+- Hierarchical Routing is the method of routing in networks that is based on hierarchical addressing. 
+- Most transmission control protocol, Internet protocol (TCPIP). Routing is based on two level of hierarchical routing in which IP address is divided into a network, person and a host person.
+- Gateways use only the network a person tell an IP data until gateways delivered it directly. 
+- It addresses the growth of routing tables.
+- Routers are further divided into regions and they know the route of their own regions only. 
+- It works like a telephone routing. 
+- Example: City, State, Country, Continent. 
+
+# Broadcast routing vs Multicast routing
+
+| S.No. | Broadcast                                                           | Multicast                                          |
+|-------|---------------------------------------------------------------------|----------------------------------------------------|
+| 1.    | It has one sender and multiple receivers.                           | It has one or more senders and multiple receivers. |
+| 2.    | It sent data from one device to all the other devices in a network. | It sent data from one device to multiple devices.  |
+| 3.    | It works on star and bus topology.                                  | It works on star, mesh, tree and hybrid topology.  |
+| 4.    | It scale well across large networks.                                | It does not scale well across large networks.      |
+| 5.    | Its bandwidth is wasted.                                            | It utilizes bandwidth efficiently.                 |
+| 6.    | It has one-to-all mapping.                                          | It has one-to-many mapping.                        |
+| 7.    | Hub is an example of a broadcast device.                            | Switch is an example of a multicast device.        |
