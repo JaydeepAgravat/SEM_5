@@ -69,3 +69,32 @@
 | But it is always easy and cost-efficient to implement datagram networks as there is no need of reserving resources and making a dedicated path each time an application has to communicate. | Implementation of virtual circuits is costly as each time a new connection has to be set up with reservation of resources and extra information handling at routers.                                                    |
 | A Datagram based network is a true packet switched network. There is no fixed path for transmitting data.                                                                                   | A virtual circuit network uses a fixed path for a particular session, after which it breaks the connection and another path has to be set up for the next session.                                                      |
 | Widely used in Internet                                                                                                                                                                     | Used in X.25, ATM(Asynchronous Transfer Mode)                                                                                                                                                                           |
+
+# Router:
+
+- A Router is a networking device that forwards data packets between computer networks. 
+- A router has a number of interfaces by which it can connect to a number of host systems. 
+
+#### Functions of a Router: 
+- The router basically performs two major functions.
+1. Forwarding 
+2. Routing 
+
+
+#### The architecture of a Router:
+
+<img src="https://www.tutorialspoint.com/assets/questions/media/56509/router1.jpg" width=50%>
+<img src="https://www.tutorialspoint.com/assets/questions/media/56509/input_port.jpg" width=50%>
+<img src="https://www.tutorialspoint.com/assets/questions/media/56509/output_Port.jpg" width=50%>
+
+###### Input Port 
+- This is the interface by which packets are admitted into the router, it performs several key functions as terminating the physical link at the router, this is done by the leftmost part in the below diagram, the middle part does the work of interoperating with the link-layer like decapsulation, in the last part of the input port the forwarding table is looked up and is used to determine the appropriate output port based on the destination address.
+###### Switching Fabric 
+- This is the heart of the Router, It connects the input ports with the output ports. It is kind of a network inside a networking device. The switching fabric can be implemented in a number of ways some of the prominent ones are: 
+Switching via memory: In this, we have a processor which copies the packet from input ports and sends it to the appropriate output port. It works as a traditional CPU with input and output ports acting as input and output devices
+Switching via bus: In this implementation, we have a bus that connects all the input ports to all the output ports. On receiving a packet and determining which output port it must be delivered to, the input port puts a particular token on the packet and transfers it to the bus. All output ports are able to see the packets but it will be delivered to the output port whose token has been put in, the token is then scraped off by that output port and the packet is forwarded
+Switching via interconnection network: This is a more sophisticated network, here instead of a single bus we use a 2N bus to connect n input ports to n output ports.
+###### Output Port 
+- This is the segment from which packets are transmitted out of the router. The output port looks at its queuing buffers (when more than one packets have to be transmitted through the same output port queuing buffers are formed) and takes packets, does link layer functions, and finally transmits the packets to an outgoing link
+###### Routing Processor 
+- It executes the routing protocols, it works like a traditional CPU. It employs various routing algorithms like link-state algorithm, distance-vector algorithm, etc. to prepare the forwarding table, which is looked up to determine the route and the output port.
