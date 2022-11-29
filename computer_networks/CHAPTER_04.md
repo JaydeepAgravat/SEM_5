@@ -143,3 +143,13 @@ Switching via interconnection network: This is a more sophisticated network, her
 - Also, the router being a network layer device, should not tamper with port numbers(transport layer) but it has to do so because of NAT. 
  
  <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.02.png" width=70%>
+
+# ICMP
+
+- Since IP does not have an inbuilt mechanism for sending error and control messages. 
+- It depends on Internet Control Message Protocol(ICMP) to provide an error control. 
+- It is used for reporting errors and management queries. It is a supporting protocol and is used by networks devices like routers for sending error messages and operations information.
+- e.g. the requested service is not available or that a host or router could not be reached. 
+ <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.03.png" width=70%>
+ 
+ 
