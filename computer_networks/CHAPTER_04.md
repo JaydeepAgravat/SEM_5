@@ -142,7 +142,7 @@ Switching via interconnection network: This is a more sophisticated network, her
 - Complicates tunneling protocols such as IPsec. 
 - Also, the router being a network layer device, should not tamper with port numbers(transport layer) but it has to do so because of NAT. 
  
- <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.02.png" width=70%>
+ <a href="https://ibb.co/3S91ST6"><img src="https://i.ibb.co/MPxnPgw/4-0-2.png" alt="4-0-2" border="0" /></a>
 
 # ICMP
 
@@ -150,7 +150,7 @@ Switching via interconnection network: This is a more sophisticated network, her
 - It depends on Internet Control Message Protocol(ICMP) to provide an error control. 
 - It is used for reporting errors and management queries. It is a supporting protocol and is used by networks devices like routers for sending error messages and operations information.
 - e.g. the requested service is not available or that a host or router could not be reached. 
- <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.03.png" width=70%>
+<a href="https://ibb.co/4WwCK6m"><img src="https://i.ibb.co/xhKwXpC/4-0-3.png" alt="4-0-3" border="0" /></a>
  
 # Hierarchical Routing Protocol
 - Hierarchical Routing is the method of routing in networks that is based on hierarchical addressing. 
@@ -176,3 +176,7 @@ Switching via interconnection network: This is a more sophisticated network, her
 # Link state routing vs Distance vector routing
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/po-1.png">
+
+# RIP vs OSPF vs BGP
+
+<a href="https://ibb.co/4dr4YkG"><img src="https://i.ibb.co/RywQB8m/4-0-4.png" alt="4-0-4" border="0" /></a>
