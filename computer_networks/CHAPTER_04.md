@@ -107,7 +107,7 @@ Switching via interconnection network: This is a more sophisticated network, her
 - It allows reuse of addresses (only hold address while connected “on”). 
 - It also support mobile users who want to join network.
 
-<img src="" >
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.01.png" >
 
 ##### Advantages 
 
@@ -119,4 +119,27 @@ Switching via interconnection network: This is a more sophisticated network, her
 
 - IP conflict can occur
 
+# Network Address Translation (NAT)
 
+- To access the Internet, one public IP address is needed, but we can use a private IP address in our private network. 
+- The idea of NAT is to allow multiple devices to access the Internet through a single public address. 
+- To achieve this, the translation of a private IP address to a public IP address is required. 
+- **Network Address Translation (NAT)** is a process in which one or more local IP address is translated into one or more Global IP address and vice versa in order to provide Internet access to the local hosts.
+- The concept of NAT is developed to solve two problems:
+1. solve shortage of IPv4 IP addresses.
+2. to hide the network address.
+- Generally, the border router is configured for NAT.
+
+##### Advantages of NAT 
+
+- NAT conserves legally registered IP addresses. 
+- It provides privacy as the device’s IP address, sending and receiving the traffic, will be hidden. 
+- Eliminates address renumbering when a network evolves. 
+
+##### Disadvantage of NAT 
+- Translation results in switching path delays. 
+- Certain applications will not function while NAT is enabled. 
+- Complicates tunneling protocols such as IPsec. 
+- Also, the router being a network layer device, should not tamper with port numbers(transport layer) but it has to do so because of NAT. 
+ 
+ <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/4.02.png" width=70%>
