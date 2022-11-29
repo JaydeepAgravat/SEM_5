@@ -172,3 +172,7 @@ Switching via interconnection network: This is a more sophisticated network, her
 | 5.    | Its bandwidth is wasted.                                            | It utilizes bandwidth efficiently.                 |
 | 6.    | It has one-to-all mapping.                                          | It has one-to-many mapping.                        |
 | 7.    | Hub is an example of a broadcast device.                            | Switch is an example of a multicast device.        |
+
+# Link state routing vs Distance vector routing
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/po-1.png">
