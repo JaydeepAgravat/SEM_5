@@ -98,3 +98,25 @@ Switching via interconnection network: This is a more sophisticated network, her
 - This is the segment from which packets are transmitted out of the router. The output port looks at its queuing buffers (when more than one packets have to be transmitted through the same output port queuing buffers are formed) and takes packets, does link layer functions, and finally transmits the packets to an outgoing link
 ###### Routing Processor 
 - It executes the routing protocols, it works like a traditional CPU. It employs various routing algorithms like link-state algorithm, distance-vector algorithm, etc. to prepare the forwarding table, which is looked up to determine the route and the output port.
+
+# DHCP:	Dynamic	Host	Configuration	Protocol
+
+- Dynamic Host Configuration Protocol is a protocol for assigning dynamic IP addresses to devices on a network. 
+- With dynamic addressing, a device can have a different IP address every time it connects to the network.
+- In some systems, the device's IP address can even change while it is still connected.
+- It allows reuse of addresses (only hold address while connected “on”). 
+- It also support mobile users who want to join network.
+
+<img src="" >
+
+##### Advantages 
+
+- centralized management of IP addresses
+- ease of adding new clients to a network
+- reuse of IP addresses reducing the total number of IP addresses that are required.
+
+##### Disadvantages
+
+- IP conflict can occur
+
+
