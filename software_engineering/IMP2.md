@@ -27,14 +27,11 @@
 - Continuous process improvement is enabled by quantitative feedback from the process and from testing innovative ideas and technologies
 - This level includes all characteristics defined for level 4
 
-<img src="http://www.gtu-paper-solution.com/upload/2160701/W2017/Q4B_OR.png">
+<img src="http://www.gtu-paper-solution.com/upload/2160701/W2017/Q4B_OR.png" width=50%>
 
 # 2. RMMM
 
-<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/1.png">
-
-<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/2.png">
-
-<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/3.png">
-
-<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/4.png">
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/1.png" width=50%>
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/2.png" width=50%>
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/3.png" width=50%>
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/4.png" width=50%>
