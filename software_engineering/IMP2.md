@@ -1,4 +1,4 @@
-# Which are the Software quality standards? Explain any one.
+# 1. Which are the Software quality standards? Explain any one.
 
 - Quality: developed product meets it’s specification.
 - List of Quality Standards:
@@ -28,3 +28,13 @@
 - This level includes all characteristics defined for level 4
 
 <img src="http://www.gtu-paper-solution.com/upload/2160701/W2017/Q4B_OR.png">
+
+# 2. RMMM
+
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/1.png">
+
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/2.png">
+
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/3.png">
+
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/4.png">
