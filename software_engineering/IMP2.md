@@ -155,7 +155,9 @@
 - If the SRS is written for the requirements phase, the details should be explained explicitly.
 -  Whereas, for a feasibility study, fewer details can be used. Hence, the level of abstraction varies according to the purpose of the SRS. 
 
+# 5. What are the challenges with DevOps implementation?
 
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/software_engineering/SE_IMG/5.png" width=90%>
 
 
 
