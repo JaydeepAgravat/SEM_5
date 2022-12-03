@@ -97,3 +97,39 @@ interface called a socket.
 (socket).
 - This sending process assumes that there is a transportation infrastructure on the other side of its door that will transport the message to the door of the destination process.
 - Once the message arrives at the destination host, the message passes through the receiving process’s door (socket), and the receiving process then acts on the message.
+
+<img src="https://i.stack.imgur.com/4APkp.png">
+
+# Transport Services available to Applications
+
+##### Reliable Data Transfer
+
+- Reliable data transfer is to guarantee that the data sent by one end of the application is
+delivered correctly and completely to the other end of the application.
+- If a protocol provides such a guaranteed data delivery service, it is said to provide reliable data
+transfer.
+- One important service that a transport-layer protocol can potentially provide to an application is
+process-to-process reliable data transfer.
+- When a transport protocol provides this service, the sending process can just pass its data into
+the socket and know with complete confidence that the data will arrive without errors at the
+receiving process.
+
+##### Throughput
+
+- Throughput is the rate at which the sending process can deliver bits to the receiving process.
+- The transport protocol ensures that the available throughput is always at least r bits/sec.
+
+##### Timing
+
+- A transport-layer protocol can also provide timing guarantees.
+- An example guarantee might be that every bit that the sender pumps into the socket arrives at
+the receiver’s socket no more than 100 msec later. Such a service would be appealing to
+interactive real-time applications, such as Internet telephony, virtual environments,
+teleconferencing, and multiplayer games, all of which require tight timing constraints on data
+delivery in order to be effective.
+Security
+- Finally, a transport protocol can provide an application with one or more security services.
+- For example, in the sending host, a transport protocol can encrypt all data transmitted by the
+sending process, and in the receiving host, the transport-layer protocol can decrypt the data
+before delivering the data to the receiving process.
+
