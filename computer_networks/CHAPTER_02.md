@@ -172,10 +172,11 @@ before delivering the data to the receiving process.
 messages.
 - Hyper-Text Transfer Protocol
 - It is Application layer protocol
-- Client: A browser that requests, receives, (using
-HTTP protocol) and “displays” Web objects.
+##### Client:
+- A browser that requests, receives, (using HTTP protocol) and “displays” Web objects.
 - E.g. PC, Mobile
-- Server: Web server sends (using HTTP protocol)  objects in response to requests.
+##### Server:
+- Web server sends (using HTTP protocol)  objects in response to requests.
 - E.g. Apache Web Server
 - A client initiates TCP connection (creates socket) to server using port 80.
 - A server accepts TCP connection from client.
