@@ -152,3 +152,11 @@ before delivering the data to the receiving process.
 |      Examples     | HTTP, HTTPs, FTP, SMTP, and Telnet use TCP.                                                                                                                                                                                                                      | DNS, DHCP, TFTP, SNMP, RIP, and VoIP use UDP.                                                                                                                                                                     |
 
 
+# Web
+- A Web page consists of objects.
+- An object is simply a file - such as an HTML file, a JPEG image, a Java applet, or a video clip, that is addressable by a single URL.
+- Most Web pages consist of a base HTML file and several referenced objects.
+- For example, if a Web page contains HTML text and five JPEG images, then the Web page has six objects: the base HTML file plus the five images.
+- The base HTML file references the other objects in the page with the objects’ URLs.
+- Each URL has two components: the hostname of the server that houses the object and the object’s path name.
+- For example, the URL “http://www.someSchool.edu/someDepartment/picture.gif” has “www.someSchool.edu” is hostname and “/someDepartment/picture.gif” is a pathname. 
