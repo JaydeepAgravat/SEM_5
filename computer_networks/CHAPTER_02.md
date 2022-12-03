@@ -53,3 +53,47 @@ running in the Web server host.
 - real-time video conferencing
 - social networking
 
+# Network Application Architectures
+
+- There are two possible structure of applications
+1. Client-Server architecture
+2. P2P (Peer to Peer) architecture
+
+##### Client-Server architecture
+- In a client-server architecture, there is an always-on host, called the server, which provides
+services requested from many other hosts, called clients.
+- A classic example is the Web application for which an always-on Web server services requests
+from browsers running on client hosts. When a Web server receives a request for an object from
+a client host, it responds by sending the requested object to the client host.
+- Note that with the client-server architecture, clients do not directly communicate with each
+other; for example, in the Web application, two browsers do not directly communicate with
+each other.
+- Another characteristic of the client-server architecture is that the server has a fixed, well-known
+address, called an IP address. Because the server is always on, a -client can always contact the
+server by sending a packet to the server’s IP address.
+- Some of the better-known applications with client-server architecture include the Web, FTP,
+Telnet, and e-mail.
+
+##### P2P architecture
+- In P2P architecture, there is no dedicated server.
+- Pairs of hosts, called peers communicate directly with each other.
+- Because the peers communicate without passing through a dedicated server, the architecture is called peer-to-peer.
+- Many of today’s most popular and traffic-intensive applications are based on P2P architectures. 
+
+# Processes Communicating
+
+- process is a program under execution.
+- Processes on two different end systems communicate with each other by exchanging messages across the computer network.
+- A process that initiates the communication is called the client. 
+- A process that waits to be contacted to begin the session is called the server.
+
+# Socket
+
+- Any message sent from one process to another must go through the underlying network.
+- A process sends messages into and receives messages from, the network through a software
+interface called a socket.
+- A process is similar to a house and its socket is similar to its door.
+- When a process wants to send a message to another process on another host, it shoves (passes) the message out its door
+(socket).
+- This sending process assumes that there is a transportation infrastructure on the other side of its door that will transport the message to the door of the destination process.
+- Once the message arrives at the destination host, the message passes through the receiving process’s door (socket), and the receiving process then acts on the message.
