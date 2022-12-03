@@ -158,5 +158,30 @@ before delivering the data to the receiving process.
 - Most Web pages consist of a base HTML file and several referenced objects.
 - For example, if a Web page contains HTML text and five JPEG images, then the Web page has six objects: the base HTML file plus the five images.
 - The base HTML file references the other objects in the page with the objects’ URLs.
-- Each URL has two components: the hostname of the server that houses the object and the object’s path name.
-- For example, the URL “http://www.someSchool.edu/someDepartment/picture.gif” has “www.someSchool.edu” is hostname and “/someDepartment/picture.gif” is a pathname. 
+- Each URL has two components: the hostname of the server and the object’s path name.
+- For example, the URL “http://www.someSchool.edu/someDepartment/picture.gif” has “www.someSchool.edu” is hostname and “/someDepartment/picture.gif” is a pathname.
+
+# HTTP
+
+- HyperText Transfer Protocol – Application layer protocol
+- It is implemented in two programs.
+1. Client Program
+2. Server Program
+- Exchanging HTTP message each others.
+- HTTP defines the structure of these messages and how web client – web server exchange
+messages.
+- Hyper-Text Transfer Protocol
+- It is Application layer protocol
+- Client: A browser that requests, receives, (using
+HTTP protocol) and “displays” Web objects.
+- E.g. PC, Mobile
+- Server: Web server sends (using HTTP protocol)  objects in response to requests.
+- E.g. Apache Web Server
+- A client initiates TCP connection (creates socket) to server using port 80.
+- A server accepts TCP connection from client.
+- HTTP messages (application-layer protocol messages) exchanged between browser (HTTP
+client) and Web server (HTTP server).
+- HTTP is “stateless protocol”, server maintains no information about past client requests.
+- HTTP connection types are:
+1. Non-persistent HTTP
+2. Persistent HTTP
