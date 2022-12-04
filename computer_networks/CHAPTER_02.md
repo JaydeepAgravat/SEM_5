@@ -218,3 +218,19 @@ client) and Web server (HTTP server).
 # HTTP Message 
 <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/2.3.png">
 <img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/2.4.png">
+
+# User-Server Interaction OR Cookies
+- A small text file created by a Web site that is stored in the user's computer either temporarily for that session only or permanently on the hard disk (persistent cookie).
+- Cookies provide a way for the Web site to recognize you and keep track of your preferences.
+###### Cookie technology has four components
+1. a cookie header line in the HTTP response message
+2. a cookie header line in the HTTP request message
+3. a cookie file kept on the user’s end system and managed by the user’s browser
+4. a back-end database at the Web site
+###### Use of cookies
+- authorization
+- shopping carts
+- recommendations
+- user session state (Web e-mail)
+
+<img src="https://miro.medium.com/max/1100/1*QOiM7Qbsb_QuRz6xFv1Hkw.webp">
