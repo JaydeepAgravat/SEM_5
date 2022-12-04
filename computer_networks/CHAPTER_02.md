@@ -178,11 +178,43 @@ messages.
 ##### Server:
 - Web server sends (using HTTP protocol)  objects in response to requests.
 - E.g. Apache Web Server
+
+##### Flow:
 - A client initiates TCP connection (creates socket) to server using port 80.
 - A server accepts TCP connection from client.
 - HTTP messages (application-layer protocol messages) exchanged between browser (HTTP
 client) and Web server (HTTP server).
 - HTTP is “stateless protocol”, server maintains no information about past client requests.
-- HTTP connection types are:
+
+##### HTTP connection types are:
 1. Non-persistent HTTP
 2. Persistent HTTP
+- In Client-Server communication, Client making a series of requests to server, Server responding to each of the requests.
+- Series of requests may be made back-to-back or periodically at regular time interval.
+- So, Application developer need to make an important decision;
+- Should each request/response pair be sent over a separate TCP connection.
+- OR should all the requests and corresponding responses be sent over same TCP connection?
+
+# Non-persistent HTTP
+
+- A non-persistent connection is closed after the server sends the requested object to the client.
+- The connection is used exactly for one request and one response.
+- For downloading multiple objects, it required multiple connections.
+- Non-persistent connections are the default mode for HTTP/1.0.
+- Example: Transferring a webpage from server to client, webpage consists of a base HTML file and 10 JPEG images.
+- Total 11 object are residing on server.
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/2.1.png">
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/2.2.png">
+
+# Persistent HTTP
+
+- Server leaves the TCP connection open after sending responses.
+- Subsequent HTTP messages between same client and server sent over open connection.
+- The server closes the connection only when it is not used for a certain configurable amount of time.
+- It requires as little as one round-trip time (RTT) for all the referenced objects.
+- With persistent connections, the performance is improved by 20%.
+- Persistent connections are the default mode for HTTP/1.1.
+
+# HTTP Message 
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/2.3.png">
+<img src="https://github.com/JaydeepAgravat/SEM_5/blob/main/computer_networks/NETWORK_IMG/2.4.png">
