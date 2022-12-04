@@ -234,3 +234,68 @@ client) and Web server (HTTP server).
 - user session state (Web e-mail)
 
 <img src="https://miro.medium.com/max/1100/1*QOiM7Qbsb_QuRz6xFv1Hkw.webp">
+
+# Web Caches (Proxy Server)
+
+- It satisfies HTTP requests on the behalf of an origin Web server.
+- The Web cache has its own disk storage and keeps copies of recently requested objects in this
+storage.
+- A user’s browser can be configured so, user’s HTTP requests are first directed to the Web
+Cache.
+- A browser sends all HTTP requests to cache.
+- As an example, suppose a browser is requesting the object
+http://www.someschool.edu/campus.gif
+- Object in cache returns to client browser.
+- Otherwise cache requests object from origin server, then returns object to client browser.
+- Reduce response time for client request.
+- Reduce traffic on an institution’s access link.
+- Internet dense with caches: Insufficiency for content providers to effectively deliver content.
+- Example: Institutional Network and Internet
+- Reduce response time for client request.
+- Reduce traffic on an institution’s access link.
+- Internet dense with caches: Insufficiency for content providers to effectively deliver content.
+
+<img src="https://o.quizlet.com/jC8W0icC1sv9-KMLxSbKdg.png">
+
+# FTP
+- File Transfer Protocol (FTP) is the commonly used protocol for exchanging files over the Network
+or Internet.
+- FTP uses the Internet's TCP/IP protocols to enable data transfer.
+- FTP uses client-server architecture.
+- FTP promotes sharing of files via remote computers with reliable and efficient data transfer.
+<img src="https://netlab.ulusofona.pt/rc/book/2-application/2_03/02-13.jpg">
+- In the above figure, a user interacts with FTP through an FTP user agent.
+- The user first provides the hostname of the remote host, causing the FTP client process in the
+local host to establish a TCP connection with the FTP server process in the remote host.
+- The user then provides the user identification and password, which are sent over the TCP
+connection as part of FTP commands.
+- Once the server has authorized the user, the user copies one or more files stored in the local file
+system into the remote file system (or vice versa).
+- FTP uses two parallel TCP connections to transfer a file,
+1. control connection
+2. data connection
+<img src="https://mscancer22.tripod.com/sitebuildercontent/sitebuilderpictures/kurose_320719_c02f14.gif">
+- The control connection is used for sending control information between the two hosts such as
+user identification, password, commands to change remote directory and commands to put and
+get files.
+- The data connection is used to actually send a file.
+- Because FTP uses a separate control connection, FTP is said to send its control information outof-band.
+- When a user starts an FTP session with a remote host, the client side of FTP (user) first initiates a
+control TCP connection with the server side (remote host) on server port number 21.
+- The client side of FTP sends the user identification and password over this control connection.
+- The client side of FTP also sends, over the control connection, commands to change the remote
+directory.
+- When the server side receives a command for a file transfer over the control connection (either
+to or from, the remote host), the server side initiates a TCP data connection to the client side.
+- FTP sends exactly one file over the data connection and then closes the data connection.
+- If during the same session, the user wants to transfer another file, FTP opens another data
+connection.
+- Thus, with FTP, the control connection remains open throughout the duration of the user
+session, but a new data connection is created for each file transferred within a session (that is,
+the data connections are non-persistent).
+
+
+
+
+
+
