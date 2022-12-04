@@ -263,7 +263,9 @@ or Internet.
 - FTP uses the Internet's TCP/IP protocols to enable data transfer.
 - FTP uses client-server architecture.
 - FTP promotes sharing of files via remote computers with reliable and efficient data transfer.
+
 <img src="https://netlab.ulusofona.pt/rc/book/2-application/2_03/02-13.jpg">
+
 - In the above figure, a user interacts with FTP through an FTP user agent.
 - The user first provides the hostname of the remote host, causing the FTP client process in the
 local host to establish a TCP connection with the FTP server process in the remote host.
@@ -274,7 +276,9 @@ system into the remote file system (or vice versa).
 - FTP uses two parallel TCP connections to transfer a file,
 1. control connection
 2. data connection
-<img src="https://mscancer22.tripod.com/sitebuildercontent/sitebuilderpictures/kurose_320719_c02f14.gif">
+
+<img src="https://mscancer22.tripod.com/sitebuildercontent/sitebuilderpictures/kurose_320719_c02f14.gif" width=40%>
+
 - The control connection is used for sending control information between the two hosts such as
 user identification, password, commands to change remote directory and commands to put and
 get files.
