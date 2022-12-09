@@ -180,3 +180,25 @@ Switching via interconnection network: This is a more sophisticated network, her
 # RIP vs OSPF vs BGP
 
 <a href="https://ibb.co/4dr4YkG"><img src="https://i.ibb.co/RywQB8m/4-0-4.png" alt="4-0-4" border="0" /></a>
+
+# IPv4 vs IPv6
+
+| IPv4                                                                                                          | IPv6                                                                                         |
+|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| IPv4 has a 32-bit address length                                                                              | IPv6 has a 128-bit address length                                                            |
+| It Supports Manual and DHCP address configuration                                                             | It supports Auto and renumbering address configuration                                       |
+| In IPv4 end to end, connection integrity is Unachievable                                                      | In IPv6 end to end, connection integrity is Achievable                                       |
+| It can generate 4.29×109 address space                                                                        | Address space of IPv6 is quite large it can produce 3.4×1038 address space                   |
+| The Security feature is dependent on application                                                              | IPSEC is an inbuilt security feature in the IPv6 protocol                                    |
+| Address representation of IPv4 is in decimal                                                                  | Address Representation of IPv6 is in hexadecimal                                             |
+| Fragmentation performed by Sender and forwarding routers                                                      | In IPv6 fragmentation performed only by the sender                                           |
+| In IPv4 Packet flow identification is not available                                                           | In IPv6 packet flow identification are Available and uses the flow label field in the header |
+| In IPv4 checksum field is available                                                                           | In IPv6 checksum field is not available                                                      |
+| It has broadcast Message Transmission Scheme                                                                  | In IPv6 multicast and anycast message transmission scheme is available                       |
+| In IPv4 Encryption and Authentication facility not provided                                                   | In IPv6 Encryption and Authentication are provided                                           |
+| IPv4 has a header of 20-60 bytes.                                                                             | IPv6 has header of 40 bytes fixed                                                            |
+| IPv4 can be converted to IPv6                                                                                 | Not all IPv6 can be converted to IPv4                                                        |
+| IPv4 consist of 4 fields which are separated by dot (.)                                                       | IPv6 consist of 8 fields, which are separated by colon (:)                                   |
+| IPv4’s  IP addresses are divided into five different classes. Class A , Class B, Class C , Class D , Class E. | IPv6 does not have any classes of IP address.                                                |
+| IPv4 supports VLSM(Variable Length subnet mask).                                                              | IPv6 does not support VLSM.                                                                  |
+| Example of IPv4:  66.94.29.13                                                                                 | Example of IPv6: 2001:0000:3238:DFE1:0063:0000:0000:FEFB                                     |
