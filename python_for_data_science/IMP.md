@@ -431,4 +431,59 @@ print(newData)
 ```
 
 ###### output :
-<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200211145643/output219.png">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200211145643/output219.png" width=10%>
+
+# 7. Explain Web Scrapping with Example using Beautiful Soup library.
+
+### Web Scraping:
+- In simple terms, Web scraping, web harvesting, or web data extraction is an automated process of collecting large data(unstructured) from websites.
+- The user can extract all the data on particular sites or the specific data as per the requirement.
+- The data collected can be stored in a structured format for further analysis.
+
+### Uses of Web Scraping:
+- Social Media Sentiment Analysis
+- Lead Generation in Marketing Domain
+- Market Analysis, Online Price Comparison in eCommerce Domain
+- Collect train and test data in Machine Learning Applications
+
+### Steps involved in web scraping:
+
+1. Find the URL of the webpage that you want to scrape
+2. Select the particular elements by inspecting
+3. Write the code to get the content of the selected elements
+4. Store the data in the required format
+
+### BeautifulSoup 
+– Python library for getting data out of HTML, XML, and other markup languages.
+- Beautiful Soup is a library that makes it easy to scrape information from web pages.
+
+
+### Example
+
+```python
+import requests
+import bs4
+
+req = requests.get('https://www.darshan.ac.in/DIET/CE/Faculty')
+soup = bs4.BeautifulSoup(req.text,'lxml')
+allFaculty = soup.select('body > main > section:nth-child(5) > div > div > div.col-lg-8.col-xl-9
+> div > div')
+
+for fac in allFaculty :
+  allSpans = fac.select('h2>a')
+  print(allSpans[0].text.strip())
+```
+
+##### Output:
+
+```
+Dr. Gopi Sanghani
+Dr. Nilesh Gambhava
+Dr. Pradyumansinh Jadeja
+Prof. Hardik Dosh
+Prof. Maulik Trivedi
+Prof. Dixita Kagathara
+```
+
+
+
