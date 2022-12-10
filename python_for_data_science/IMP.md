@@ -454,7 +454,7 @@ print(newData)
 4. Store the data in the required format
 
 ### BeautifulSoup 
-– Python library for getting data out of HTML, XML, and other markup languages.
+- Python library for getting data out of HTML, XML, and other markup languages.
 - Beautiful Soup is a library that makes it easy to scrape information from web pages.
 
 
@@ -485,5 +485,7 @@ Prof. Maulik Trivedi
 Prof. Dixita Kagathara
 ```
 
+# 8. Explain Bag of Word model.
 
+<a href="https://ibb.co/DM03gxr"><img src="https://i.ibb.co/DM03gxr/bOw.png" alt="bOw" border="0"></a>
 
