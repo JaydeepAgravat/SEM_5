@@ -191,3 +191,23 @@ from the data.
 
 - The insights you obtain from manipulating and analyzing the data help you to perform real world tasks. 
 - For example you can use the result of an analysis to make a business decision.
+
+# 4. List and Explain different programming styles (programming paradigms) in python.
+
+- There are four main Python coding styles: imperative, functional, object-oriented, and procedural.
+- `1.Functional`:
+  - Every statement is treated as a mathematical equation and any forms of state or mutable data are avoided. 
+  - The main advantage of this approach is that it lends itself well to parallel processing because there is no state to consider.
+  - Many developers prefer this coding style for recursion and for lambda calculus.
+- `2.Imperative`:
+  - Computation is performed as a direct change to program state.
+  - This style is especially useful when manipulating data structures and produces elegant yet simple code. 
+  - Python fully implements this paradigm.
+- `3.Object-oriented`:
+  - Relies on data fields that are treated as objects and manipulated only through prescribed methods.
+  - Python doesn’t fully support this paradigm because it can’t implement features such as data hiding (encapsulation), which many believe is a primary requirement of the object-oriented programming paradigm.
+  - This coding style also favors code reuse.
+- `4.Procedural`:
+  - Tasks are treated as step-by-step iterations where common tasks are placed in functions that are called as needed. 
+  - This coding style favors iteration, sequencing, selection, and modularization.
+  - Python excels in implementing this particular paradigm.
