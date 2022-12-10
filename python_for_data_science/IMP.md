@@ -141,6 +141,53 @@ print(x)
 Output : result = 87.60 %
 ```
 
+# 2. Explain List, Set, Tuple and Dictionary in Python.
+
+- There are four built-in data structures in Python - list, dictionary, tuple and set.
+
+| Name       | Type | Description                                                                             | Example                                           |
+|------------|------|-----------------------------------------------------------------------------------------|---------------------------------------------------|
+| List       | list | Ordered Sequence of objects, will be represented with square brackets [ ]               | Example : [ 18, “darshan”, True, 102.3 ]          |
+| Dictionary | dict | Unordered key : value pair of objects , will be represented with curly brackets { }     | Example : { “college”: “darshan”, “code”: “054” } |
+| Tuple      | tup  | Ordered immutable sequence of objects, will be represented with round brackets ( )      | Example : ( 18, “darshan”, True, 102.3 )          |
+| Set        | set  | Unordered collection of unique objects, will be represented with the curly brackets { } | Example : { 18, “darshan”, True, 102.3 }          |
+
+# 3. List and Explain steps of Data Science Pipeline.
 
 
+- Data science pipeline requires the data scientist to follow particular steps in the preparation, analysis and presentation of the data.
 
+- General steps in the pipeline are :
+1. Preparing the data
+2. Performing data analysis
+3. Learning from data
+4. Visualizing 
+5. Obtaining insights
+
+#### 1. Preparing the data
+
+- The data we access from various sources may not come directly in the structured format.
+- We need to transform the data in the structured format.
+- Transformation may require changing data types, order in which data appears and even the creation of missing data
+
+#### 2. Performing data analysis
+
+- Results of the data analysis should be provable and consistent.
+- Some time single approach may not provide the desired output, we need to use multiple algorithms to get the result.
+- The use of trial and error is part of the data science art.
+
+#### 3. Learning from data
+
+- As we iterate through various statistical analysis methods and apply algorithms to detect patterns, we begin learning
+from the data.
+- The data might not tell the story that you originally thought it would.
+
+#### 4. Visualizing
+
+- Visualizing means seeing the patterns in the data and then being able to react to those patterns.
+- It also means being able to see when data is not part of the pattern.
+
+#### 5. Obtaining insights
+
+- The insights you obtain from manipulating and analyzing the data help you to perform real world tasks. 
+- For example you can use the result of an analysis to make a business decision.
