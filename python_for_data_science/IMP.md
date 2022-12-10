@@ -368,3 +368,67 @@ print(df)
 | It was developed by Wes McKinney and was released in 2008.                              | It was developed by Travis Oliphant and was released in 2005.                       |
 | It is used in a lot of organizations like Kaidee, Trivago, Abeja Inc. , and a lot more. | It is being used in organizations like Walmart Tokopedia, Instacart, and many more. |
 | It has a higher industry application.                                                   | It has a lower industry application.                                                |
+
+# 6. Explain read_csv and read_excel functions in pandas with example.
+
+### Read CSV in Pandas
+
+- read_csv() is used to read Comma Separated Values (CSV) file into a pandas DataFrame.
+- some of important Parameters :
+```
+filePath : str, path object, or file-like object
+
+sep : separator (Default is comma)
+
+header: Row number(s) to use as the column names.
+
+index_col : index column(s) of the data frame.
+```
+#### Example of Read CSV
+```python
+dfINS = pd.read_csv('Marks.csv',index_col=0,header=0)
+
+print(dfINS)
+```
+
+```python
+PDS Algo SE INS
+101 50 55 60 55.0
+102 70 80 61 66.0
+103 55 89 70 77.0
+104 58 96 85 88.0
+201 77 96 63 66.0
+```
+
+## Read Excel in Pandas
+
+- The XLSX and XLS file extensions are used for Microsoft Excel spreadsheets
+- Read an Excel file into a pandas DataFrame.
+- Supports xls, xlsx, xlsm, xlsb, odf, ods and odt file extensions read from a local filesystem or URL. Supports an option to read a single sheet or a list of sheets.
+- some of important Parameters :
+```
+excelFile : str, bytes, ExcelFile, xlrd.Book, path object, or file-like object
+
+sheet_name : sheet no in integer or the name of the sheet, can have list of sheets.
+
+index_col : index column of the data frame.
+```
+
+```python
+file =('path_of_excel_file')
+
+sheet1 = pds.read_excel(file, 
+                        sheet_name = 0, 
+                        index_col = 0)
+  
+sheet2 = pds.read_excel(file, 
+                        sheet_name = 1, 
+                        index_col = 0)
+  
+newData = pds.concat([sheet1, sheet2])
+
+print(newData)
+```
+
+###### output :
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200211145643/output219.png">
