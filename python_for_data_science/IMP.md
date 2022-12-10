@@ -211,3 +211,99 @@ from the data.
   - Tasks are treated as step-by-step iterations where common tasks are placed in functions that are called as needed. 
   - This coding style favors iteration, sequencing, selection, and modularization.
   - Python excels in implementing this particular paradigm.
+
+# 5. Explain Series and DataFrame in Pandas with example and differentiate Numpy and Pandas.
+
+##### Series
+
+Series is an one-dimensional* array with axis labels.
+
+It supports both integer and label-based index but index must be of hashable type.
+
+If we do not specify index it will assign integer zero-based index.
+
+###### Syntax
+
+```
+import pandas as pd
+s = pd.Series(data,index,dtype,copy=False)
+
+Parameters
+data  = array like Iterable
+index = array like index
+dtype = data-type
+copy  = bool, default is False
+```
+
+###### Example
+
+```python
+import pandas as pd
+s = pd.Series([1, 3, 5, 7, 9, 11])
+print(s)
+
+output :
+0 1
+1 3
+2 5
+3 7
+4 9
+5 11
+dtype: int64
+```
+
+- We can then access the elements inside Series just like array using square brackets notation.
+
+```python
+import pandas as pd
+
+s = pd.Series([1, 3, 5, 7, 9, 11])
+print("S[0] = ", s[0])
+
+b = s[0] + s[1]
+print("Sum = ", b)
+
+output :
+S[0] = 1
+Sum = 4
+```
+
+- We can specify the data type of Series using dtype parameter.
+
+```python
+import pandas as pd
+
+s = pd.Series([1, 3, 5, 7, 9, 11], dtype='str')
+print("S[0] = ", s[0])
+
+b = s[0] + s[1]
+print("Sum = ", b)
+
+output:
+S[0] = 1
+Sum = 13
+```
+
+- We can specify index to Series with the help of index parameter.
+```python
+import numpy as np
+
+import pandas as pd
+
+i = ['name','address','phone','email','website']
+
+d = ['darshan','rj',123','d@d.com','darshan.ac.in']
+
+s = pd.Series(data=d,index=i)
+
+print(s)
+
+output : 
+name     darshan
+address  rj
+phone    123
+email    d@d.com
+website  darshan.ac.in
+
+dtype: object
+```
