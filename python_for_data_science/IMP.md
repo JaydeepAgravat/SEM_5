@@ -214,7 +214,7 @@ from the data.
 
 # 5. Explain Series and DataFrame in Pandas with example and differentiate Numpy and Pandas.
 
-##### Series
+## Series
 
 Series is an one-dimensional* array with axis labels.
 
@@ -307,3 +307,64 @@ website  darshan.ac.in
 
 dtype: object
 ```
+
+## Data Frame
+
+- Data frames are two dimensional data structure, i.e. data is aligned in a tabular format in rows and columns.
+- Data frame also contains labelled axes on rows and columns.
+##### Features of Data Frame :
+1. It is size-mutable
+2. Has labelled axes
+3. Columns can be of different data types
+4. We can perform arithmetic operations on rows and columns.
+##### Structure
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/finallpandas.png" width=70%>
+
+##### Create Dataframe
+
+- A pandas DataFrame can be created using various inputs like −
+1. Lists
+2. dict
+3. Series
+4. Numpy ndarrays
+5. Another DataFrame
+
+###### Example : Creating DataFrame from dict of lists
+
+```python
+  import pandas as pd
+
+# intialise data 
+data = {'Name':['Tom', 'nick', 'krish', 'jack'],
+        'Age':[20, 21, 19, 18]}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Print the output.
+print(df)
+```
+
+```Python
+    Output:
+      Name  Age
+  0    Tom   20
+  1   nick   21
+  2  krish   19
+  3   jack   18
+```
+
+## Pandas vs Numpy
+
+| PANDAS                                                                                  | NUMPY                                                                               |
+|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| When we have to work on Tabular data, we prefer the pandas module.                      | When we have to work on Numerical data, we prefer the numpy module.                 |
+| The powerful tools of pandas are Data frame and Series.                                 | Whereas the powerful tool of numpy is Arrays.                                       |
+| Pandas consume more memory.                                                             | Numpy is memory efficient.                                                          |
+| Pandas has a better performance when a number of rows is 500K or more.                  | Numpy has a better performance when number of rows is 50K or less.                  |
+| Indexing of the pandas series is very slow as compared to numpy arrays.                 | Indexing of numpy Arrays is very fast.                                              |
+| Pandas offer a have2d table object called DataFrame.                                    | Numpy is capable of providing multi-dimensional arrays.                             |
+| It was developed by Wes McKinney and was released in 2008.                              | It was developed by Travis Oliphant and was released in 2005.                       |
+| It is used in a lot of organizations like Kaidee, Trivago, Abeja Inc. , and a lot more. | It is being used in organizations like Walmart Tokopedia, Instacart, and many more. |
+| It has a higher industry application.                                                   | It has a lower industry application.                                                |
