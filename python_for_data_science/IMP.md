@@ -491,6 +491,8 @@ Prof. Dixita Kagathara
 
 # 9. Explain join and merge functions in pandas with example.
 
+- **The main difference between join vs merge would be; join() is used to combine two DataFrames on the index but not on columns whereas merge() is primarily used to specify the columns you wanted to join on, this also supports joining on indexes and combination of index and columns.**
+
 ### Join in Pandas
 
 - df.join() method will efficiently join multiple DataFrame objects by index(or column specified) .
@@ -601,3 +603,35 @@ print(res)
 ```
 - output :
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/abhifinal.jpg">
+
+# 10. Explain how to deal with missing data in Pandas.
+
+- There are many methods by which we can deal with the missing data, some of most commons are listed below,
+
+1. dropna, will drop (delete) the missing data (rows/cols)
+2. fillna, will fill specified values in place of missing data
+3. interpolate, will interpolate missing data and fill interpolated value in place of missing data.
+
+```python
+# Remove all rows with NULL values
+
+import pandas as pd
+df = pd.read_csv('data.csv')
+df.dropna(inplace = True)
+```
+
+```python
+# Replace NULL values with the number 130
+
+import pandas as pd
+df = pd.read_csv('data.csv')
+df.fillna(130, inplace = True)
+```
+
+```python
+# Replace NULL values with the number between the previous and next row
+
+import pandas as pd
+df = pd.read_csv('data.csv')
+newdf = df.interpolate(method='linear', inplace = True))
+```
