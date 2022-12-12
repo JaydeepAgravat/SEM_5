@@ -413,16 +413,16 @@ sheet_name : sheet no in integer or the name of the sheet, can have list of shee
 
 index_col : index column of the data frame.
 ```
-
+#### Example of Read Excel
 ```python
-file =('path_of_excel_file')
+file = 'records.xlsx'
 
 sheet1 = pds.read_excel(file, 
-                        sheet_name = 0, 
+                        sheet_name = 'student',
                         index_col = 0)
   
 sheet2 = pds.read_excel(file, 
-                        sheet_name = 1, 
+                        sheet_name = 'teacher',
                         index_col = 0)
   
 newData = pds.concat([sheet1, sheet2])
@@ -489,3 +489,115 @@ Prof. Dixita Kagathara
 
 <a href="https://ibb.co/DM03gxr"><img src="https://i.ibb.co/DM03gxr/bOw.png" alt="bOw" border="0"></a>
 
+# 9. Explain join and merge functions in pandas with example.
+
+### Join in Pandas
+
+- df.join() method will efficiently join multiple DataFrame objects by index(or column specified) .
+
+- Join columns of another DataFrame.
+
+- some of important Parameters :
+```
+dfOther : Right Data Frame
+
+on (Not recommended) : specify the column on which we want to join (Default is index)
+
+how : How to handle the operation of the two objects.
+
+left: use calling frame’s index (Default).
+
+right: use dfOther index.
+
+outer: form union of calling frame’s index with other’s index (or column if on is specified), and sort it.lexicographically.
+
+inner: form intersection of calling frame’s index (or column if on is specified) with other’s index, preserving the order
+of the calling’s one.
+```
+```python
+# importing pandas module
+import pandas as pd 
+  
+# Define a dictionary containing employee data 
+data1 = {'Name':['Jai', 'Princi', 'Gaurav', 'Anuj'], 
+        'Age':[27, 24, 22, 32]} 
+    
+# Define a dictionary containing employee data 
+data2 = {'Address':['Allahabad', 'Kannuaj', 'Allahabad', 'Kannuaj'], 
+        'Qualification':['MCA', 'Phd', 'Bcom', 'B.hons']} 
+  
+# Convert the dictionary into DataFrame  
+df1 = pd.DataFrame(data1, index=['K0', 'K1', 'K2', 'K3'])
+  
+# Convert the dictionary into DataFrame  
+df2 = pd.DataFrame(data2, index=['K0', 'K2', 'K3', 'K4'])
+ 
+# joining dataframe
+res = df1.join(df2)
+
+
+print(df1)
+print(df2) 
+print(res)
+
+```
+- Output :
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/finaljoin11.jpg">
+
+### Merge in Pandas
+
+- Merge DataFrame or named Series objects with a database-style join.
+- Similar to join method, but used when we want to join/merge with the columns instead of index.
+- some of important Parameters :
+```
+dfOther : Right Data Frame
+
+on : specify the column on which we want to join (Default is index)
+
+left_on : specify the column of left Dataframe
+
+right_on : specify the column of right Dataframe
+
+how : How to handle the operation of the two objects.
+
+left: use calling frame’s index (Default).
+
+right: use dfOther index.
+
+outer: form union of calling frame’s index with other’s index (or column if on is specified), and sort it.
+lexicographically.
+
+inner: form intersection of calling frame’s index (or column if on is specified) with other’s index, preserving the order
+of the calling’s one.
+```
+
+```python
+# importing pandas module
+import pandas as pd 
+ 
+# Define a dictionary containing employee data 
+data1 = {'key': ['K0', 'K1', 'K2', 'K3'],
+         'Name':['Jai', 'Princi', 'Gaurav', 'Anuj'], 
+        'Age':[27, 24, 22, 32],} 
+   
+# Define a dictionary containing employee data 
+data2 = {'key': ['K0', 'K1', 'K2', 'K3'],
+         'Address':['Nagpur', 'Kanpur', 'Allahabad', 'Kannuaj'], 
+        'Qualification':['Btech', 'B.A', 'Bcom', 'B.hons']} 
+ 
+# Convert the dictionary into DataFrame  
+df1 = pd.DataFrame(data1)
+ 
+# Convert the dictionary into DataFrame  
+df2 = pd.DataFrame(data2) 
+  
+ 
+# using .merge() function
+res = pd.merge(df1, df2, on='key')
+ 
+print(df1)
+print(df2) 
+print(res)
+```
+- output :
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/abhifinal.jpg">
