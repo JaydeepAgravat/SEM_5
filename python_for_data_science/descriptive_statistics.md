@@ -518,7 +518,7 @@ Example
 |-----|------|------|------|------|------|------|------|------|------|------|------|
 | P(X=x)| 1/36 | 2/36 | 3/36 | 4/36 | 5/36 | 6/36 | 5/36 | 4/36 | 3/36 | 2/36 | 1/36 |
 
-```math
+```
 P(X = x) = Number of ways to get x / Total possible outcomes
 ```
 
@@ -540,7 +540,7 @@ Here is the list of discrete probability distributions:
 
 Calculate Probability
 
-```math
+```
 P(a ≤ X ≤ b) = ∫[from a to b] f(x) dx
 Where:
 
