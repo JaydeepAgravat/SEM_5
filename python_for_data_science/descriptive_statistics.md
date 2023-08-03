@@ -360,7 +360,7 @@ variables are not linearly related.
 
 ## Formula
 
-```math
+```
 Sample Mean = (x1 + x2 + ... + xn) / n
 Population Mean = (x1 + x2 + ... + xn) / n
 
@@ -398,6 +398,7 @@ sample r(X, Y) = Cov(X, Y) / (s(X) * s(Y))
 
 
 ```
+
 # Probability Distribution
 
 ## Random Variable
