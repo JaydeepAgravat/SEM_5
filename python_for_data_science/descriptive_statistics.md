@@ -665,3 +665,209 @@ One of the main advantages of KDE is its ability to smooth out the noise and pro
 However, choosing an appropriate bandwidth is crucial, as an overly wide or narrow bandwidth can lead to over-smoothing or under-smoothing of the estimated PDF, respectively.
 
 As with any density estimation method, the quality of the estimate depends on the size and quality of the data set used for estimation.
+
+## How to use PDF
+
+- Interpreting the Probability Density Function (PDF) involves understanding the information it provides about the distribution of a continuous random variable.
+- The PDF describes the likelihood of the random variable taking on various values within its range.
+- Here's how to interpret the PDF:
+
+1. Probability at a specific point:
+   - The value of the PDF at a specific point does not give the probability of the random variable being exactly equal to that value, as the probability of a single point in a continuous distribution is zero.
+   - Instead, the PDF provides the probability density at that point. The higher the value of the PDF at a particular point, the higher the probability density, indicating that values near that point are more likely to occur.
+
+2. Area under the curve:
+   - The total area under the PDF curve represents the total probability of all possible outcomes.
+   - For a continuous random variable, the probability of it falling within a particular range is given by the area under the PDF curve over that range.
+
+3. Relative likelihood:
+   - Comparing the heights of the PDF at different points allows you to determine which values are more or less likely to occur.
+   - Higher peaks indicate higher likelihood, while lower regions indicate lower likelihood.
+
+4. Shape of the distribution:
+   - The shape of the PDF curve gives insights into the distribution of the data.
+   - Common shapes include symmetric (e.g., normal distribution), skewed (positively or negatively), and uniform.
+
+5. Range of the random variable:
+   - The PDF is only defined over the range of the random variable.
+   - Outside this range, the probability is zero.
+
+6. Integration for probability calculations:
+   - To find the probability of the random variable lying within a specific range, you need to integrate the PDF over that range.
+   - The integral of the PDF over an interval gives the probability of the random variable falling within that interval.
+
+7. Expected value:
+   - The expected value (mean) of the continuous random variable can be calculated using the PDF.
+   - The expected value is the center of mass or the balance point of the distribution.
+
+8. Variance and Standard deviation:
+   - The variance and standard deviation of the continuous random variable can also be determined from the PDF.
+   - They represent the spread or dispersion of the data around the mean.
+
+Remember, the PDF itself doesn't provide individual probabilities for specific points but gives a continuous representation of the distribution's characteristics.
+
+It's crucial to understand that the PDF is a tool for understanding the relative likelihood of different outcomes and for performing probability calculations over intervals.
+
+## How to use CDF
+
+- Interpreting the Cumulative Distribution Function (CDF) for a continuous random variable involves understanding how it provides information about the probabilities of the random variable taking on values up to a specific point.
+- The CDF gives a cumulative view of the distribution and allows you to make probability calculations for continuous random variables.
+- Here's how to interpret the CDF:
+
+1. Probability at a specific point:
+   - The CDF at a specific point gives the probability that the random variable is less than or equal to that point.
+   - In other words, for a continuous random variable X and a given value x, CDF(x) represents P(X ≤ x).
+
+2. Monotonicity:
+   - The CDF is a non-decreasing function, meaning it either increases or remains constant as you move along the range of the random variable.
+   - It starts at 0 and approaches 1 as the value of the random variable approaches positive infinity.
+
+3. Probability over an interval:
+   - To find the probability that the random variable falls within a specific range [a, b], you can calculate the difference between the CDF values at b and a.
+   - That is, P(a ≤ X ≤ b) = CDF(b) - CDF(a).
+
+4. Probability density:
+   - The derivative of the CDF with respect to the random variable provides the Probability Density Function (PDF).
+   - For a continuous random variable, the CDF is a continuous function, and its derivative exists everywhere except at isolated points.
+
+5. Quantiles and percentiles:
+   - The CDF is useful for finding quantiles and percentiles of the distribution.
+   - For instance, the 50th percentile (also known as the median) is the value at which the CDF equals 0.5.
+
+6. Range of the random variable:
+   - The CDF is defined for all real numbers, and its values are within the range [0, 1].
+   - CDF(x) = 0 means that the probability of the random variable being less than or equal to x is 0, and CDF(x) = 1 means that the probability is 1.
+
+7. Complementary CDF:
+   - The complementary CDF (CCDF) is 1 minus the CDF.
+   - It gives the probability that the random variable is greater than a specific value.
+
+The CDF provides a comprehensive view of the distribution and allows you to determine probabilities for individual values as well as for intervals.
+
+It also serves as a foundation for other statistical concepts like hypothesis testing, confidence intervals, and survival analysis. Understanding the CDF is crucial for conducting various analyses and making informed decisions based on continuous random variables.
+
+## 2D Density Plots
+
+- A 2D density plot is a data visualization technique used to display the distribution of data points in a two-dimensional space.
+- It represents the density of data points as a color map, contour plot, or heat map, allowing us to observe the concentration of data and identify patterns or trends.
+- 2D density plots are particularly useful when visualizing large datasets with overlapping points, enabling better insights into the underlying data distribution and relationships between variables.
+- Darker areas or higher contours indicate regions with more data points, while lighter areas or lower contours show sparser regions.
+
+## Normal Distribution
+
+What is normal distribution?
+
+- Normal distribution, also known as Gaussian distribution, is a probability distribution that is commonly used in statistical analysis.
+- It is a continuous probability distribution that is symmetrical around the mean, with a bell-shaped curve.
+- Asymptotic in nature.
+- Lots of points near the mean and very few far away.
+- The normal distribution is characterized by two parameters: the mean (μ) and the
+standard deviation (σ).
+- The mean represents the centre of the distribution, while the standard deviation represents the spread of the distribution.
+- Denoted as: X ~ N(μ,σ)
+
+Why is it so important?
+
+- Commonality in Nature: Many natural phenomena follow a normal distribution, such as the heights of people, the weights of objects, the IQ scores of a population, and many more.
+- Thus, the normal distribution provides a convenient way to model and analyse such
+data.
+
+PDF Equation of Normal Distribution:
+
+    ```python
+    f(x; μ, σ) = (1 / (σ * √(2π))) * e^(-((x - μ)^2 / (2 * σ^2)))
+
+    Equation Detail: y=e^(-x^2)
+    ```
+
+Parameters in Normal Distribution:
+
+- If the mean increases, the whole distribution shifts to the right, and vice versa for a decrease in the mean.
+- If the standard deviation increases, the distribution becomes more spread out, and vice versa for a decrease in the standard deviation.
+- The mean influences the center and symmetry of the normal distribution, while the standard deviation impacts its spread and shape.
+
+## Standard Normal distribution
+
+- A Standard Normal distribution is a standardized form of the normal distribution with mean = 0 and standard deviation = 1.
+- Standardizing a normal distribution allows us to compare different distributions with each other, and to calculate probabilities using standardized tables or software.
+
+Equation:
+
+    ```python
+    f(z) = (1 / √(2π)) * e^(-z^2 / 2)
+    ```
+
+- To transform a normal distribution to Standard Normal distribution we use
+Standard Normal Variate [Z = (x-μ/σ)].
+- The Standard Normal Variate, also known as the Z-score.
+
+Suppose the heights of adult males in a certain population follow a normal distribution with a mean of 68 inches and a standard deviation of 3 inches. What is the probability that a randomly selected adult male from this population is taller than 72 inches?
+
+    ```python
+    We need to calculate P(X > 72).
+
+    First, we standardize the value 72 using the Z-score formula:
+
+    Z = (X - μ) / σ
+
+    where X = 72, μ = 68, and σ = 3.
+
+    Z = (72 - 68) / 3 = 4 / 3 ≈ 1.3333
+
+    P(Z > 1.3333) ≈ 0.0912
+    ```
+
+What are Z-tables
+
+- A z-table tells you the area underneath a normal distribution curve, to the left of the z-score.
+
+## Properties of Normal Distribution
+
+1. Symmetricity
+    - The normal distribution is symmetric about its mean, which means that the probability of observing a value above the mean is the same as the probability of observing a value below the mean.
+    - The bell-shaped curve of the normal distribution reflects this symmetry.
+
+2. Measures of Central Tendencies are equal
+
+3. Empirical Rule
+    - The normal distribution has a well-known empirical rule, also called the 68-95-99.7 rule,
+    - which states that approximately 68% of the data falls within one standard deviation of the mean, about 95% of the data falls within two standard deviations of the mean, and about 99.7% of the data falls within three standard deviations of the mean.
+
+4. The area under the curve is 1.
+
+## Skewness
+
+- Skewness is a measure of the asymmetry of a probability distribution.
+- It is a statistical measure that describes the degree to which a dataset deviates from the normal distribution.
+- In a symmetrical distribution, the mean, median, and mode are all equal.
+- In contrast, in a skewed distribution, the mean, median, and mode are not equal, and the distribution tends to have a longer tail on one side than the other.
+- Skewness can be positive, negative, or zero.
+- A positive skewness means that the tail of
+the distribution is longer on the right side, while a negative skewness means that the tail
+is longer on the left side.
+- A zero skewness indicates a perfectly symmetrical distribution.
+- The greater the skew the greater the distance between mode, median and mode.
+
+How skewness is calculated?
+
+    ```python
+    Sample Skewness = [(∑(xi - x̄)^3) / (n * s^3)]
+    Population Skewness = [(∑(xi - μ)^3) / (N * σ^3)]
+    ```
+
+## CDF of Normal Distribution
+
+- The Cumulative Distribution Function (CDF) of the normal distribution produces an S-shaped curve.
+- The CDF of the normal distribution is an essential tool for calculating probabilities associated with a specific range of values or for finding percentiles of the distribution.
+- It allows us to assess the likelihood of observing values up to a certain point in the normal distribution.
+- Increasing μ shifts the entire CDF to the right.
+- Increasing the standard deviation results in a broader CDF curve that covers a wider range of values, as the data becomes more spread out & and a higher likelihood of observing extreme values.the probability of observing values close to the mean decreases.
+- Decreasing the standard deviation in a normal distribution implies a narrower spread of data points and a higher likelihood of observing values close to the mean. The probability of observing extreme values decreases.
+
+Use of Normal Distribution in Data Science:
+
+- Outlier detection
+- Assumptions on data for ML algorithms (Linear Regression and GMM)
+- Hypothesis Testing
+- Central Limit Theorem
+
