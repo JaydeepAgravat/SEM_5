@@ -1,4 +1,4 @@
-# Descriptive Statistics
+# Statistics
 
 ## What is Statistics ?
 
@@ -753,7 +753,7 @@ It also serves as a foundation for other statistical concepts like hypothesis te
 - 2D density plots are particularly useful when visualizing large datasets with overlapping points, enabling better insights into the underlying data distribution and relationships between variables.
 - Darker areas or higher contours indicate regions with more data points, while lighter areas or lower contours show sparser regions.
 
-## Normal Distribution
+# Normal Distribution
 
 What is normal distribution?
 
