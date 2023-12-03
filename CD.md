@@ -828,3 +828,431 @@ The given expression is: `-(a+b)*(c+d)-(a+b+c)`
 11. (11) t11 = t9 + t10
 12. (12) t12 = t8 - t11
 ```
+
+## UNIT-8
+
+### 1. Explain Pass structure of assembler
+
+In the context of compiler design, a pass refers to a single traversal of the entire source code by a compiler. The compilation process is often divided into multiple passes, each of which performs a specific set of tasks. The pass structure of an assembler is a similar concept, where the assembler processes the source code in multiple passes to generate the machine code.
+
+Here is a detailed explanation of the pass structure of an assembler:
+
+**Pass 1:**
+
+1. **Symbol Table Creation:**
+   - The first pass involves creating a symbol table. The symbol table keeps track of all the symbols (labels, variables, etc.) used in the source code along with their corresponding addresses or values.
+   - During this pass, the assembler also checks for syntax errors and records information about the code structure.
+
+2. **Location Counter Update:**
+   - The assembler maintains a location counter to keep track of the memory location being assigned to each instruction or data item. It is updated as the assembler processes each line of code.
+
+3. **Generate Intermediate Code:**
+   - Intermediate code or an intermediate representation of the source code is generated. This code is an abstraction of the source code and is used as an intermediate step in the compilation process.
+
+**Pass 2:**
+
+1. **Resolve Addresses:**
+   - Using the information gathered in Pass 1, the assembler resolves addresses and updates any address-related fields in the intermediate code.
+
+2. **Generate Machine Code:**
+   - Translate the intermediate code into machine code or assembly code. This involves converting mnemonics and operands into their binary representations.
+
+3. **Generate Final Output:**
+   - Create the final output file, which may include the machine code, relocation information, and other necessary details.
+
+**Example:**
+
+Let's consider a simple assembly code snippet:
+
+```assembly
+START:  MOV A, B
+        ADD C
+        SUB D
+        END
+```
+
+**Pass 1:**
+- Symbol Table:
+  ```
+  START   0
+  A       0
+  B       0
+  C       0
+  D       0
+  ```
+
+- Location Counter:
+  ```
+  START   0
+  ```
+
+**Pass 2:**
+- After resolving addresses and generating machine code:
+  ```assembly
+  0000:   1011 0001   ; MOV A, B
+  0002:   1100 1100   ; ADD C
+  0004:   1101 1101   ; SUB D
+  ```
+
+This is a simplified example, and in a real-world scenario, there might be additional passes and complexities. The pass structure allows the assembler to efficiently process the source code and generate the corresponding machine code.
+
+### 2. Explain Basic-Block Scheduling
+
+Basic-Block Scheduling is a technique used in compiler optimization to improve the performance of a program by reordering the basic blocks of code. A basic block is a sequence of instructions with a single entry point at the beginning and a single exit point at the end. Basic-Block Scheduling aims to optimize the execution order of these basic blocks to enhance the efficiency of the generated machine code.
+
+Here's a step-by-step explanation of Basic-Block Scheduling:
+
+1. **Basic Block Identification:**
+   - The first step involves identifying basic blocks within the program. Basic blocks are typically defined by control flow instructions such as branches, jumps, or conditional statements. Each basic block represents a segment of code with a linear flow of control.
+
+2. **Control Flow Graph (CFG) Construction:**
+   - A Control Flow Graph is constructed to represent the control flow between basic blocks. Nodes in the graph represent basic blocks, and directed edges represent control flow between these blocks.
+
+3. **Analyze Dependencies:**
+   - Dependencies between basic blocks are analyzed to understand the data and control dependencies. This involves determining which basic blocks can execute independently and which ones have dependencies on the results of others.
+
+4. **Schedule Basic Blocks:**
+   - Based on the analysis of dependencies, the scheduler rearranges the basic blocks in an order that maximizes the efficiency of instruction execution. The goal is to minimize pipeline stalls, optimize resource utilization, and improve the overall performance of the program.
+
+5. **Instruction Reordering:**
+   - Within each basic block, the scheduler may also reorder instructions to improve instruction-level parallelism and reduce stalls. This involves considering the available hardware resources and optimizing the sequence of instructions for better pipelining.
+
+6. **Code Generation:**
+   - After the basic blocks are scheduled and instructions are reordered, the compiler generates the final optimized machine code.
+
+**Example:**
+
+Consider the following code snippet:
+
+```c
+1.  if (x > 0) {
+2.    y = x * 2;
+3.  } else {
+4.    y = x / 2;
+5.  }
+6.  z = y + 5;
+```
+
+In this example, basic blocks might be identified as follows:
+
+- Basic Block 1: Lines 1-2
+- Basic Block 2: Lines 3-4
+- Basic Block 3: Line 6
+
+Basic-Block Scheduling might decide to reorder these basic blocks based on dependencies, and the optimized control flow might look like:
+
+1. Basic Block 2
+2. Basic Block 1
+3. Basic Block 3
+
+This reordering could potentially improve instruction scheduling and resource utilization, leading to better performance.
+
+It's important to note that while Basic-Block Scheduling is effective, more advanced scheduling techniques, such as trace scheduling and global scheduling, are often used in modern compilers to achieve even better performance optimization.
+
+### 3. What is dependency graph? Explain with example
+
+A dependency graph, in the context of compiler design and optimization, is a graphical representation of dependencies between different instructions or operations in a program. It helps in visualizing the data and control dependencies within a program, which is crucial for various compiler optimization techniques, including instruction scheduling, parallelization, and resource allocation.
+
+There are two main types of dependencies:
+
+1. **Data Dependency:**
+   - A data dependency occurs when the result of one instruction depends on the result of another instruction. There are three types of data dependencies:
+      - **True Dependency (Read-After-Write, RAW):** The output of one instruction is used as input by another instruction.
+      - **Anti-Dependency (Write-After-Read, WAR):** The output of one instruction is overwritten before it is read by another instruction.
+      - **Output Dependency (Write-After-Write, WAW):** Two instructions write to the same location, and the order of execution matters.
+
+2. **Control Dependency:**
+   - A control dependency exists when the execution of an instruction depends on the outcome of a branch or conditional statement.
+
+Now, let's consider an example and create a dependency graph:
+
+```c
+1.  a = b + c;
+2.  d = a * 2;
+3.  e = b - c;
+4.  f = d + e;
+```
+
+In this code, we can identify the following dependencies:
+
+- **Data Dependencies:**
+  - `2` depends on the result of `1` (RAW dependency).
+  - `4` depends on the results of both `2` and `3` (RAW dependencies).
+
+- **Control Dependencies:**
+  - `2` and `3` are not control-dependent on each other because there are no branches in the code.
+
+Now, let's represent these dependencies in a dependency graph:
+
+```
+      1
+      |
+      v
+      2
+     / \
+    v   v
+    3   4
+```
+
+In this graph:
+- Node `1` represents the instruction `a = b + c`.
+- Node `2` represents the instruction `d = a * 2`, which depends on the result of `1`.
+- Node `3` represents the instruction `e = b - c`, which is independent of `2`.
+- Node `4` represents the instruction `f = d + e`, which depends on the results of both `2` and `3`.
+
+This dependency graph visually illustrates the dependencies between instructions in the given code. Compiler optimizations can use this information to reorder instructions, schedule them for parallel execution, and improve overall program performance.
+
+## UNIT-7
+
+### 1. Issues in the Design of Code Generator:
+
+Code generation is a crucial phase in the compiler design process, responsible for translating the intermediate code generated by the front-end into the target machine code. Several issues need to be considered during the design of a code generator:
+
+- **Target Machine Architecture:** Understanding the target machine's architecture is crucial. Different architectures have distinct instruction sets, addressing modes, and memory hierarchies. The code generator must be tailored to exploit the strengths and characteristics of the target architecture.
+
+- **Register Allocation:** Efficient use of registers is essential for optimizing the generated code. The code generator must decide which variables to keep in registers, when to spill them to memory, and how to minimize register spills and reloads.
+
+- **Instruction Selection:** Choosing the most appropriate instructions from the target instruction set is a critical task. This involves selecting instructions that closely match the semantics of the source code, considering their execution time, and avoiding unnecessary operations.
+
+- **Code Size and Performance Trade-offs:** There is often a trade-off between generating compact code and optimizing for execution speed. The code generator must find the right balance based on the application requirements and constraints.
+
+- **Handling Complex Constructs:** Dealing with high-level language constructs, such as function calls, loops, and conditionals, requires careful code generation to ensure correctness and efficiency.
+
+- **Code Generation for Special Instructions:** Some architectures have special instructions for specific operations (e.g., multimedia instructions). Exploiting these special instructions can significantly improve performance but requires additional complexity in the code generator.
+
+### 2. Basic Block and Flow Graph:
+
+- **Basic Block:** A basic block is a sequence of consecutive instructions in which control flows straight through without any branches except at the entry and exit points. It starts with a single entry point and has a single exit point. For example:
+
+    ```
+    B1:  a = b + c
+         d = a - e
+         if (d > 0) goto B2
+         return d
+    ```
+
+    In this example, B1 is a basic block.
+
+- **Flow Graph:** A flow graph is a graphical representation of a program's control flow. It consists of nodes representing basic blocks and directed edges representing the flow of control between these basic blocks. Each basic block is a node, and edges indicate the possible transitions between basic blocks.
+
+    ```
+          B1
+         /  \
+        /    \
+    B2       B3
+      \     /
+       \   /
+        B4
+    ```
+
+    In this example, B1, B2, B3, and B4 are basic blocks, and the arrows represent control flow.
+
+### 3. Code Optimization Techniques:
+
+- **Constant Folding:** Constant folding is a technique where the compiler evaluates constant expressions at compile-time instead of runtime. For example, if the expression is `int result = 2 + 3;`, constant folding would replace it with `int result = 5;`.
+
+- **Loop Optimization:** Loop optimization aims to improve the efficiency of loops. Techniques include loop unrolling (replicating loop bodies to reduce loop control overhead), loop fusion (combining adjacent loops), and loop-invariant code motion (moving computations that don't change inside the loop outside of it).
+
+- **Common Subexpression Elimination (CSE):** CSE involves identifying and eliminating redundant computations. If the same subexpression is computed multiple times, the compiler can store the result and reuse it, reducing the overall computation.
+
+These optimization techniques contribute to making the generated code more efficient in terms of both time and space. Each technique focuses on specific aspects of the code to enhance performance.
+
+### 4. Symbol Table Management:
+
+A symbol table is a data structure used by compilers to store information about the variables, functions, objects, labels, and other entities in a program. Symbol table management involves creating, updating, and querying this data structure during various phases of the compilation process.
+
+- **Creation:** During the lexical analysis and parsing phases, the compiler creates a symbol table by extracting information about identifiers and their attributes from the source code.
+
+- **Updating:** As the compiler processes the code, the symbol table is updated to include details such as data types, scope information, memory locations, and other properties associated with each symbol.
+
+- **Querying:** The compiler consults the symbol table during subsequent phases, such as semantic analysis, optimization, and code generation, to retrieve information about symbols and make informed decisions based on their attributes.
+
+- **Scope Management:** Symbol tables help manage the scope of variables and other entities. They store information about the scope in which each symbol is declared, allowing the compiler to enforce scoping rules and resolve identifier references correctly.
+
+- **Type Checking:** Symbol tables are crucial for type checking during semantic analysis. They store the data type information associated with each symbol, enabling the compiler to catch type-related errors and ensure type consistency.
+
+- **Code Generation:** Symbol tables play a role in generating code by providing information about memory locations, register allocation, and other details needed to translate high-level code into machine code.
+
+### 5. Definitions:
+
+- **i. Basic Block:** A basic block is a sequence of consecutive instructions in a program where control flows straight through without any branches except at the entry and exit points. Basic blocks are fundamental units for analysis and optimization in compilers.
+
+- **ii. Constant Folding:** Constant folding is a compiler optimization technique where the compiler evaluates constant expressions during compile-time rather than at runtime. It involves replacing constant expressions with their computed values to improve the efficiency of the generated code.
+
+- **iii. Handle:** In the context of compiler design, a handle refers to a substring of symbols in the right-hand side of a production rule during the parsing process. Handles are used in the construction of parse trees or in reduction steps during bottom-up parsing.
+
+### 6. Symbol Table:
+
+A symbol table is a data structure used by compilers to store information about symbols (identifiers, variables, functions, etc.) appearing in a program. The symbol table serves the following purposes:
+
+- **Storage of Information:** It stores attributes associated with each symbol, such as its name, data type, scope, memory location, and other relevant details.
+
+- **Scope Resolution:** Symbol tables help in resolving the scope of identifiers. They keep track of where each symbol is declared and how its scope extends throughout the program.
+
+- **Error Detection:** Symbol tables aid in detecting errors related to undeclared or multiply declared identifiers, incompatible types, and other semantic errors during the compilation process.
+
+- **Code Generation:** During code generation, the symbol table provides necessary information for allocating memory, managing registers, and generating code that correctly references variables and functions.
+
+- **Optimization:** Symbol tables play a role in various optimization techniques by providing insights into the usage patterns and characteristics of symbols in the program.
+
+In summary, the symbol table is a critical component of a compiler, facilitating the efficient analysis and translation of high-level source code into machine code.
+
+### 7. Peephole Optimization:
+
+Peephole optimization is a local optimization technique that involves examining and transforming a small, contiguous sequence of instructions (a "peephole") in a program to improve its efficiency. This optimization is performed on a limited number of instructions, typically a small window or "peephole," and aims to eliminate redundant or inefficient code.
+
+**Example:**
+
+Consider the following x86 assembly code:
+
+```assembly
+1.  MOV AX, 0
+2.  MOV BX, 0
+3.  ADD AX, BX
+4.  MOV CX, 0
+5.  ADD CX, AX
+```
+
+In this code, peephole optimization can identify that the `MOV AX, 0` instruction followed by `ADD AX, BX` is redundant, and the value of AX is not used before it's overwritten. The optimized code would look like:
+
+```assembly
+1.  MOV BX, 0
+2.  MOV CX, BX
+```
+
+Here, the peephole optimization has eliminated the unnecessary intermediate steps, resulting in more efficient code.
+
+### 8. Global Optimization:
+
+Global optimization involves analyzing and optimizing the entire program or large sections of it, rather than focusing on isolated parts. Two types of analysis performed for global optimization are:
+
+- **Data Flow Analysis:** This analysis studies how data values propagate through a program. It helps identify relationships between variables and how they change over the course of the program's execution. Common data flow analyses include reaching definitions, available expressions, and live variable analysis.
+
+- **Control Flow Analysis:** This analysis examines the flow of control through the program, identifying basic blocks, loops, and conditional branches. It helps in understanding the structure of the program's control flow, which is essential for optimizing techniques such as loop optimization and branch optimization.
+
+### 9. Directed Acyclic Graph (DAG):
+
+- **Definition:** A Directed Acyclic Graph (DAG) is a graph that consists of nodes connected by edges, where the edges have a direction, and there are no cycles. In the context of compiler optimization, a DAG is often used to represent expressions and their common subexpressions.
+
+- **Advantages in Optimization:**
+  - **Common Subexpression Elimination (CSE):** DAGs help identify common subexpressions efficiently. Nodes in the DAG represent subexpressions, and if the same subexpression appears in multiple places in the code, it is represented by a single node in the DAG. This aids in eliminating redundant computations.
+
+  - **Simplifying Expressions:** DAGs provide a structured representation of expressions, making it easier to identify opportunities for algebraic simplifications and optimizations.
+
+### 10. Issues in Code Generation:
+
+Some of the common issues in code generation include:
+
+- **Register Allocation:** Efficiently assigning variables to registers is a challenging task, especially when the number of variables exceeds the available registers. This can impact the performance of the generated code.
+
+- **Instruction Selection:** Choosing the best instructions from the target machine's instruction set to represent high-level language constructs can be complex. The code generator needs to make optimal choices to ensure both correctness and efficiency.
+
+- **Handling Control Flow:** Generating code for control flow constructs like loops, conditionals, and function calls requires careful consideration to maintain correctness and efficiency.
+
+- **Code Size vs. Performance Trade-offs:** There is often a trade-off between generating compact code and optimizing for execution speed. Striking the right balance is crucial, considering the target architecture and application requirements.
+
+- **Specialized Instructions:** Some architectures have special instructions for specific operations. Utilizing these instructions can enhance performance, but it adds complexity to the code generation process.
+
+- **Code Generation for High-Level Constructs:** Translating high-level language constructs, such as classes, objects, and exception handling, into efficient machine code poses challenges that require sophisticated code generation techniques.
+
+### 11. Functions of Error Handler:
+
+The error handler in a compiler performs several important functions to manage and respond to errors in the source code. These functions include:
+
+- **Error Detection:** The error handler is responsible for detecting errors in the source code during the various phases of compilation, such as lexical analysis, syntax analysis, semantic analysis, and beyond.
+
+- **Error Reporting:** Once an error is detected, the error handler generates informative error messages to help the programmer understand and fix the issue. These messages typically include details about the type and location of the error.
+
+- **Error Recovery:** In some cases, the error handler may attempt to recover from errors and continue the compilation process. Error recovery strategies may involve skipping portions of the code or inserting additional tokens to synchronize the parsing process.
+
+- **Symbolic Debugging Information:** The error handler often contributes to the generation of symbolic debugging information. This information aids programmers in identifying the source of errors during the debugging process.
+
+- **Graceful Termination:** In the presence of critical errors, the error handler ensures a graceful termination of the compilation process, preventing the generation of incorrect or incomplete output.
+
+- **Interactive Debugging Support:** For compilers used in interactive development environments, the error handler may facilitate interactive debugging by providing features such as step-by-step execution and variable inspection.
+
+### 12. Parse Tree vs. Syntax Tree:
+
+- **Parse Tree:**
+  - **Definition:** A parse tree, also known as a concrete syntax tree, is a hierarchical tree-like structure generated by the parser during the parsing phase of compilation.
+  - **Granularity:** It represents the syntactic structure of the input code in detail, including all the grammar rules and production steps.
+  - **Nodes:** Each node in the parse tree corresponds to a grammar rule or a terminal symbol in the source code.
+  - **Ambiguity:** Parse trees may expose the ambiguity present in the grammar.
+  - **Usage:** Parse trees are more closely tied to the grammar and are primarily used in the early stages of compiler construction.
+
+- **Syntax Tree:**
+  - **Definition:** A syntax tree, or abstract syntax tree (AST), is a simplified, abstract representation of the syntactic structure of the source code.
+  - **Granularity:** It captures the essential structure of the code, omitting certain details present in the parse tree.
+  - **Nodes:** Nodes in the syntax tree represent language constructs, such as expressions, statements, and declarations.
+  - **Ambiguity:** Syntax trees are designed to eliminate ambiguity and provide a clearer representation of the program's structure.
+  - **Usage:** Syntax trees are commonly used in later phases of compilation, such as semantic analysis, optimization, and code generation.
+
+### 13. S Attributes vs. L Attributes:
+
+In compiler construction, S attributes (Synthesized attributes) and L attributes (Inherited attributes) are used to pass information between nodes in a syntax tree during semantic analysis.
+
+- **S Attributes (Synthesized attributes):**
+  - **Definition:** S attributes are attributes whose values are computed at a node and then passed up the tree to the parent node.
+  - **Direction:** Information flows from the children to the parent.
+  - **Example:** In an arithmetic expression, the type of the expression is a synthesized attribute. The type of a complex expression is computed based on the types of its subexpressions.
+
+- **L Attributes (Inherited attributes):**
+  - **Definition:** L attributes are attributes whose values are passed down from the parent node to the children nodes.
+  - **Direction:** Information flows from the parent to the children.
+  - **Example:** In an arithmetic expression, the context or precedence level is an inherited attribute. The parent node may pass down information about the context in which the children should be evaluated.
+
+### 14. Handle and Handle Pruning:
+
+- **Handle:**
+  - **Definition:** In the context of bottom-up parsing, a handle is a substring of the right-hand side of a production that matches the right end of the sentential form being reduced.
+  - **Role:** During the bottom-up parsing process, the handle indicates the portion of the input that is being replaced by a nonterminal during a reduction step.
+
+- **Handle Pruning:**
+  - **Definition:** Handle pruning refers to the process of removing the handle from the right end of the sentential form during a reduction step in bottom-up parsing.
+  - **Purpose:** Handle pruning is essential to transform the sentential form into a shorter form that corresponds to a nonterminal in the grammar. It simplifies the derivation, moving from the rightmost handle toward the left.
+
+In summary, handles are crucial for recognizing the application of a production during bottom-up parsing, and handle pruning is the step that effectively reduces the length of the sentential form by replacing the handle with the corresponding nonterminal.
+
+### 15. Conflicts in LR Parser:
+
+In LR parsing, conflicts can arise when the parser generator encounters ambiguity or uncertainty in the decision-making process. There are two main types of conflicts in LR parsers:
+
+- **Shift-Reduce Conflict:**
+  - **Definition:** A shift-reduce conflict occurs when the parser faces a choice between shifting the next input symbol onto the stack or reducing the current stack content to a higher-level construct.
+  - **Example:**
+    ```
+    Grammar:
+    1. E → E + E
+    2. E → id
+    ```
+
+    Consider the input string "id + id." The parser encounters a shift-reduce conflict when it sees the second "id." It can either shift the "id" onto the stack or reduce the existing "id + id" to an E. The decision is ambiguous without additional information.
+
+- **Reduce-Reduce Conflict:**
+  - **Definition:** A reduce-reduce conflict occurs when the parser must decide between two or more production rules to reduce the current stack content.
+  - **Example:**
+    ```
+    Grammar:
+    1. E → E + E
+    2. E → E * E
+    ```
+
+    For the input "id + id * id," a reduce-reduce conflict arises when the parser has "id * id" on the stack. It can reduce it either using production rule 1 (E → E + E) or production rule 2 (E → E * E), leading to ambiguity.
+
+To resolve conflicts, parser generators typically follow a set of precedence and associativity rules provided by the grammar. Additionally, manual intervention by the programmer may be required to resolve certain types of conflicts.
+
+### 16. Input Buffering:
+
+- **Definition:** Input buffering is a technique used in the lexical analysis phase of a compiler to efficiently read and process the input characters. Instead of reading one character at a time, input buffering involves reading a block or buffer of characters into memory, making it available for faster access by the lexical analyzer.
+
+- **Purpose:**
+  - **Efficiency:** Input buffering improves the efficiency of lexical analysis by reducing the frequency of system calls to read individual characters. Reading characters in blocks is often more efficient than reading them one by one.
+  
+  - **Reduced Overhead:** Buffering reduces the overhead associated with reading characters from the input source, such as file or keyboard input.
+
+  - **Ease of Lookahead:** Input buffering facilitates lookahead, allowing the lexical analyzer to examine multiple characters ahead to make decisions based on the entire token being analyzed.
+
+- **Example:**
+  - Consider a simple scenario where the lexical analyzer needs to identify numeric literals. With input buffering, instead of reading one character at a time, it can read a block of characters representing the numeric literal into a buffer. This allows the lexical analyzer to efficiently scan the buffer, identify the entire numeric literal, and proceed with tokenization.
+
+In summary, input buffering is used to enhance the performance of lexical analysis by reading characters in larger blocks, improving efficiency, reducing overhead, and facilitating lookahead capabilities.
